@@ -120,12 +120,17 @@ i:hover {
     content: ")";
 }
 
-.header__block_nav ul>li {
-    display: inline-block;
+.header__block_nav {
+    width: 81.4%;
 }
 
-.header__block_nav ul>li+li {
-    margin-left: 64px;
+.header__block_nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__block_nav ul>li {
+    display: inline-block;
 }
 
 .header__block_nav ul>li a {
@@ -137,7 +142,7 @@ i:hover {
     position: relative;
 }
 
-.header__block_search input {
+.header__block_search_input {
     width: 120px;
     padding: 7px 0;
     border: 0;
@@ -145,17 +150,17 @@ i:hover {
     border-bottom: 2px solid #e5e5e5;
 }
 
-.header__block_search input::-webkit-input-placeholder {
+.header__block_search_input::-webkit-input-placeholder {
     font: 13px/1 'OpenSans', sans-serif;
     color: #a8a8a8;
 }
 
-.header__block_search input:-ms-input-placeholder {
+.header__block_search_input:-ms-input-placeholder {
     font: 13px/1 'OpenSans', sans-serif;
     color: #a8a8a8;
 }
 
-.header__block_search input:-moz-placeholder {
+.header__block_search_input:-moz-placeholder {
     font: 13px/1 'OpenSans', sans-serif;
     color: #a8a8a8;
 }
@@ -168,6 +173,28 @@ i:hover {
     color: #a9a8a8;
 }
 
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 14px 40px;
+        height: 120px;
+    }
+
+    .header__block_nav {
+        width: 90%;
+    }
+
+    /* TODO: MAKE COLLAPSED INPUT ABOVE ITEMS BY CLICK */
+    .header__block_search_input {
+        display: none;
+        position: relative;
+        top: -22px;
+        right: 50px;
+    }
+
+    .header__block_search .fa-search {
+        position: unset;
+    }
+}
 /* ---------------------------------------------------------- */
 
 /* --------------- SECTION BANNERS START -------------------- */
@@ -177,21 +204,36 @@ i:hover {
     border-bottom: 1px solid #e5e5e5; 
 }
 
-.section__banners > div {
+.section__banners > a {
     position: relative;
-    width: 50%;
-    height: 385px;
+    height: 388px;
 }
 
+.section__banners__nike_wrapper,
+.section__banners__capsNhats_wrapper {
+    width: 50%;
+}
+
+.section__banners > a > div {
+    height: inherit;
+    width: 100%;
+}
+
+.section__banners_nike_image,
+.section__banners_capsNhats_image {
+    width: inherit;
+    height: inherit;
+} 
+
 .section__banners__capsNhats {
-    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
     background-color: #f7f7f7;
 }
 
 .section__banner_description {
     position: absolute;
-    top: 65px;
-    right: 100px;
+    top: 15%;
+    right: 15%;
     z-index: 999;
 }
 
@@ -209,11 +251,51 @@ i:hover {
 .section__banners_nike_image {
     -webkit-filter: grayscale(15%) contrast(120%);
             filter: grayscale(15%) contrast(120%);
- }
+}
+
+.section__banners__sale_wrapper {
+    display: none;
+}
+
+.section__banner_description.sale_description {
+    top: 65%;
+    right: 50%;
+    margin-right: -31px;
+}
+
+.section__banner_description_title.sale_title {
+    text-align: center;
+    color: #f14a58;
+}
+
+@media screen and (max-width: 768px) {
+    .section__banners > a {
+        height: 250px;
+    }
+
+    .section__banners__nike_wrapper {
+        width: 67%;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .section__banners__capsNhats_wrapper {
+        display: none;
+    }
+
+    .section__banners__sale_wrapper {
+        display: block;
+        width: 33%;
+    }
+
+    .section__banners_nike_image {
+        width: unset;
+    }
+}
 /* ---------------- SECTION BANNERS END --------------------- */
+
 /*---------------  SECTION NEW ARRIVALS START ---------------- */
 .section__newArrivals {
-    padding: 140px 60px 80px 60px;
+    padding: 135px 60px 80px 60px;
 }
 
 .section__newArrivals h1 {
@@ -228,10 +310,19 @@ i:hover {
     justify-content: space-between;
 }
 
-.section-newArrivals_rowPeople_card {
+.section__newArrivals_rowPeople_card {
     width: 20%;
+}
+
+.section__newArrivals_image_wrapper {
+    width: 100%;
     height: 340px;
     background-color: #f4f4f6;
+}
+
+.section__newArrivals_image_wrapper > img {
+    width: 100%;
+    height: inherit;
 }
 
 .section__newArrivals_price,
@@ -259,8 +350,12 @@ i:hover {
     border: 1px solid #e5e5e5;
 }
 
-.section__newArrivals_button:hover {
+/* TODO: BORDER ON ACTIVE */
+.section__newArrivals_button:hover,
+.section__newArrivals_button:active,
+.section__newArrivals_button:focus {
     cursor: pointer;
+    border: 1px solid #e5e5e5;
 }
 
 .section__newArrivals_button_text {
@@ -268,6 +363,27 @@ i:hover {
     letter-spacing: .05em;
 }
 
+@media screen and (max-width: 768px) {
+    .section__newArrivals {
+        padding: 140px 40px 135px 40px;
+    }
+
+    .section__newArrivals h1 {
+        font-size: 40px;
+    }
+
+    .person_card_4 {
+        display: none;
+    }
+
+    .section__newArrivals_rowPeople_card {
+        width: 30%;
+    }
+
+    .section__newArrivals_image_wrapper {
+        height: 290px;
+    }
+}
 /* -------------- SECTION NEW ARRIVALS END -------------------- */
 
 /* ------------------- FOOTER START ---------------------------- */
@@ -301,9 +417,15 @@ i:hover {
     line-height: 40px;
 }
 
+.footer__block_column_questions,
+.footer__block_column_phone {
+    height: 55px;
+}
+
+
 .footer__block_column_text {
     font: 14px/1 'Roboto', sans-serif;
-    margin-top: 16px;
+    margin-top: 18px;
 }
 
 .footer__block_column_text .fa-twitter {
@@ -317,6 +439,7 @@ i:hover {
 
 .footer__block_description {
     width: 100%;
+    height: 80px;
 }
 
 .footer__block_description_text {
@@ -327,6 +450,7 @@ i:hover {
 
 .footer__block_social {
     width: 100%;
+    height: 20px;
 }
 
 .footer__block_social i+i {
@@ -359,7 +483,7 @@ i:hover {
 .footer__block_share_talkBubble {
     display: inline-block;
     margin-left: 10px;
-    padding: 6px;
+    padding: 5px 6px;
     background-color: #f4f4f4;
     position: relative;
 }
@@ -368,12 +492,16 @@ i:hover {
     content: "";
     position: absolute;
     right: 100%;
-    top: 10px;
+    top: 30%;
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
     border-right: 8px solid #f4f4f4;
     border-bottom: 5px solid transparent;
+}
+
+.footer__block_share_talkBubble_text {
+    font: 12px/1 'Roboto', sans-serif;
 }
 
 .footer__block_privacy>ul>li {
@@ -388,4 +516,41 @@ i:hover {
     font: 12px/1 'Roboto Bold', sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+    .footer__block_1 {
+        justify-content: space-around;
+    }
+
+    .footer__block_column+.footer__block_column {
+        border: none;
+    }
+
+    .footer__block_column {
+        padding: 50px 60px 100px 40px;
+    }
+
+    .footer__block_column_1 {
+        width: 60%;
+    }
+
+    .footer__block_column_2 {
+        width: 40%;
+    }
+
+    .footer__block_column_phone {
+        margin: 10px 0 60px 0;
+    }
+
+    .footer__block_description {
+        display: none;
+    }
+    
+    .footer__block_2 {
+        padding: 0 40px;
+    }
+
+    .footer__block_share_text {
+        font-size: 16px;
+    }
+}
 /* --------------------- FOOTER END ------------------------------ */
