@@ -1,0 +1,391 @@
+/* --------------------- ***** FONTS ***** ------------------ */
+@font-face {
+    font-family: 'OpenSans bold';
+    src: url('../fonts/opensans-bold-webfont.eot');
+    src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-bold-webfont.woff') format('woff'),
+        url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-regular-webfont.woff') format('woff'),
+        url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto bold';
+    src: url('../fonts/roboto-bold-webfont.eot');
+    src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-bold-webfont.woff') format('woff'),
+        url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-regular-webfont.woff') format('woff'),
+        url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------------------------------------------------------- */
+
+/* -------------------- DEFAULT SETTINGS -------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* font: 14px/1 'Roboto', sans-serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'OpenSans Bold', sans-serif;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+i:hover {
+    cursor: pointer;
+}
+/* ---------------------------------------------------------- */
+
+/* -------------------------- HEADER ------------------------ */
+.header {
+    padding: 14px 60px;
+    height: 120px;
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__block_title {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.header__block_singup,
+.header__block_bag {
+    font: 12px/1 'Roboto', sans-serif;
+    display: inline-block;
+}
+
+.header__block_singup {
+    margin-right: 50px;
+}
+
+.header__block_bag .fa-shopping-bag {
+    margin-right: 15px;
+}
+
+.header__block_bag_counter::before {
+    content: "(";
+}
+
+.header__block_bag_counter::after {
+    content: ")";
+}
+
+.header__block_nav ul>li {
+    display: inline-block;
+}
+
+.header__block_nav ul>li+li {
+    margin-left: 64px;
+}
+
+.header__block_nav ul>li a {
+    font: 13px/1 'OpenSans bold', sans-serif;
+
+}
+
+.header__block_search {
+    position: relative;
+}
+
+.header__block_search input {
+    width: 120px;
+    padding: 7px 0;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.header__block_search input::-webkit-input-placeholder {
+    font: 13px/1 'OpenSans', sans-serif;
+    color: #a8a8a8;
+}
+
+.header__block_search input:-ms-input-placeholder {
+    font: 13px/1 'OpenSans', sans-serif;
+    color: #a8a8a8;
+}
+
+.header__block_search input:-moz-placeholder {
+    font: 13px/1 'OpenSans', sans-serif;
+    color: #a8a8a8;
+}
+
+.header__block_search .fa-search {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 12px;
+    color: #a9a8a8;
+}
+
+/* ---------------------------------------------------------- */
+
+/* --------------- SECTION BANNERS START -------------------- */
+.section__banners {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+.section__banners > div {
+    position: relative;
+    width: 50%;
+    height: 385px;
+}
+
+.section__banners__capsNhats {
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f7f7f7;
+}
+
+.section__banner_description {
+    position: absolute;
+    top: 65px;
+    right: 100px;
+    z-index: 999;
+}
+
+.section__banner_description_title {
+    font-size: 28px;
+}
+
+.section__banner_description_fiture {
+    font: italic 16px/1 "Times New Roman";
+    margin-top: 14px;
+    color: #757575;
+    text-align: center;
+}
+
+.section__banners_nike_image {
+    -webkit-filter: grayscale(15%) contrast(120%);
+            filter: grayscale(15%) contrast(120%);
+ }
+/* ---------------- SECTION BANNERS END --------------------- */
+/*---------------  SECTION NEW ARRIVALS START ---------------- */
+.section__newArrivals {
+    padding: 140px 60px 80px 60px;
+}
+
+.section__newArrivals h1 {
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 95px;
+}
+
+.section__newArrivals_rowPeople {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-newArrivals_rowPeople_card {
+    width: 20%;
+    height: 340px;
+    background-color: #f4f4f6;
+}
+
+.section__newArrivals_price,
+.section__newArrivals_name {
+    text-align: center;
+}
+
+.section__newArrivals_name {
+    width: 160px;
+    font: 14px/24px 'Roboto bold';
+    margin: 48px auto 20px;
+    text-align: center;
+}
+
+.section__newArrivals_price {
+    font: 14px/1 'Roboto';
+}
+
+.section__newArrivals_button {
+    display: block;
+    width: 300px;
+    height: 70px;
+    margin: 98px auto 0;
+    background: none;
+    border: 1px solid #e5e5e5;
+}
+
+.section__newArrivals_button:hover {
+    cursor: pointer;
+}
+
+.section__newArrivals_button_text {
+    font: 20px/1 'OpenSans bold', sans-serif;
+    letter-spacing: .05em;
+}
+
+/* -------------- SECTION NEW ARRIVALS END -------------------- */
+
+/* ------------------- FOOTER START ---------------------------- */
+.footer__block {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer__block_column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    padding: 55px 190px 100px 60px;
+}
+
+.footer__block_column+.footer__block_column {
+    border-left: 1px solid #e5e5e5;
+}
+
+.footer__block_column_title {
+    font: 16px/1 'OpenSans bold', sans-serif;
+}
+
+.footer_block_column_list {
+    margin-top: 40px;
+}
+
+.footer_block_column_list>li>a {
+    font: 14px/1 'Roboto', sans-serif;
+    line-height: 40px;
+}
+
+.footer__block_column_text {
+    font: 14px/1 'Roboto', sans-serif;
+    margin-top: 16px;
+}
+
+.footer__block_column_text .fa-twitter {
+    margin-right: 6px;
+    color: #d7d7d7;
+}
+
+.footer__block_column_text_tweet {
+    font-weight: 900;
+}
+
+.footer__block_description {
+    width: 100%;
+}
+
+.footer__block_description_text {
+    width: 310px;
+    font: italic 16px/1.875 "Times New Roman";
+    color: #757575;
+}
+
+.footer__block_social {
+    width: 100%;
+}
+
+.footer__block_social i+i {
+    margin-left: 25px;
+}
+
+.footer__block_social .fa-facebook-f {
+    color: #315295
+}
+
+.footer__block_social .fa-twitter {
+    color: #4bb8f0;
+}
+
+.footer__block_2 {
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.footer__block_copyright {
+    font: 12px/1 'Roboto Bold', sans-serif;
+}
+
+.footer__block_share_text {
+    font: 18px/1 'OpenSans bold', sans-serif;
+}
+
+.footer__block_share_talkBubble {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 6px;
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+.footer__block_share_talkBubble::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #f4f4f4;
+    border-bottom: 5px solid transparent;
+}
+
+.footer__block_privacy>ul>li {
+    display: inline-block;
+}
+
+.footer__block_privacy>ul>li+li {
+    margin-left: 35px;
+}
+
+.footer__block_privacy>ul>li a {
+    font: 12px/1 'Roboto Bold', sans-serif;
+}
+
+/* --------------------- FOOTER END ------------------------------ */
