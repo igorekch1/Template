@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,12 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <!---------- HEADER START ------------>
     <header class="header">
         <div class="header__block">
-            <h2 class="header__block_title">Template</h2>
+            <h1 class="header__block_title">Template</h1>
             <div class="header__block_singup_bag">
                 <div class="header__block_singup">
                     <a href="#">E-mail sing up</a>
@@ -44,6 +46,92 @@
         </div>
     </header>
     <!--------- HEADER END ----------->
+
+    <!------------------ SECTION ITEM START ---------------------->
+    <section class="section__item">
+        <div class="block__headline">
+            <a href="./catalog.html" class="block__headline_backto">&lt; Back to catalog</a>
+        </div>
+        <div class="secion__item_block">
+            <div class="section__item_block_photos">
+                <img src="./img/item/item-photo-1.png" alt="ITEM PHOTO 1" class="section__item_block_photos_photo1">
+                <img src="./img/item/item-photo-2.png" alt="ITEM PHOTO 2" class="section__item_block_photos_photo1">
+                <img src="./img/item/item-photo-3.png" alt="ITEM PHOTO 3" class="section__item_block_photos_photo1">
+                <img src="./img/item/item-photo-4.png" alt="ITEM PHOTO 4" class="section__item_block_photos_photo1">
+            </div>
+            <div class="section__item_block_info">
+                <div class="section__item_block_info_name">
+                    Dark classic fit suit
+                </div>
+                <div class="section__item_block_info_description">
+                    Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs 
+                    <span class="section__item_block_info_description_hidden">and a subtle stripe pattern throughout.</span>
+                </div>
+                <div class="section__item_block_info_price">&pound;180.60</div>
+                <div class="section__item_block_info_options">
+                    <div class="section__item_block_info_options section__item_block_info_options_size">
+                        <span class="section__item_block_info_options_text">Size:</span>
+                        <button class="section__item_block_info_options_button">
+                            <span class="section__item_block_info_options_button_text">UK 52</span>
+                        </button>
+                        <button class="section__item_block_info_options_button">
+                            <span class="section__item_block_info_options_button_text">UK 54</span>
+                        </button>
+                        <button class="section__item_block_info_options_button">
+                            <span class="section__item_block_info_options_button_text">UK 56</span>
+                        </button>
+                    </div>
+                    <div class="section__item_block_info_options section__item_block_info_options_color">
+                        <span class="section__item_block_info_options_text">Color:</span>
+                        <button class="section__item_block_info_options_button">
+                            <span class="section__item_block_info_options_button_text">Black</span>
+                        </button>
+                        <button class="section__item_block_info_options_button">
+                            <span class="section__item_block_info_options_button_text">Blue</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="section__item_block_info_button button">
+                    <span class="section__item_block_info_button_text button_text">
+                        Add to bag
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!------------------- SECTION ITEM END ----------------------->
+
+    <!------------------ SECTION BANNERS START ------------------->
+    <section class="section__banners">
+        <a href="./item.html" class="section__banners__adidas_wrapper">
+            <div class="section__banners__adidas">
+                <div class="section__banner_description">
+                    <h3 class="section__banner_description_title section__banner_description_title_light">Adidas Blue</h3>
+                    <div class="section__banner_description_fiture section__banner_description_fiture_light">For men</div>
+                </div>
+                <img class="section__banners_adidas_image" src="./img/catalog/adidas-blue.png" alt="ADIDAS BLUE">
+            </div>
+        </a>
+        <a href="./item.html" class="section__banners__repair_wrapper">
+            <div class="section__banners__repair">
+                <img class="section__banners_repairPatches_image" src="./img/catalog/repair-patches.png" alt="Repair Patches">
+                <div class="section__banners_block_item_text">
+                    <h4 class="section__banners_block_item_text_title">Repair Patches</h4>
+                    <div class="section__banners_block_item_text_description">&pound;150.50</div>
+                </div>
+            </div>
+        </a>
+        <a href="./item.html" class="section__banners__sale_wrapper sale_visible">
+            <div class="section__banners__sale">
+                <img class="" src="./img/catalog/sale.png" alt="SUITCASE">
+                <div class="section__banner_description sale_description">
+                    <h3 class="section__banner_description_title sale_title">Sale</h3>
+                    <div class="section__banner_description_fiture sale_fiture">-70%</div>
+                </div>
+            </div>
+        </a>
+    </section>
+    <!------------------ SECTION BANNERS END --------------------->
 
     <!------------------ FOOTER START --------------------->
     <footer class="footer">
@@ -130,7 +218,8 @@
         </div>
     </footer>
     <!------------------- FOOTER END ---------------------->
-    
+
     <script src="./js/script.js"></script>
 </body>
+
 </html>

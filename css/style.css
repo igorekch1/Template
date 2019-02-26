@@ -63,7 +63,7 @@
 }
 
 body {
-    /* font: 14px/1 'Roboto', sans-serif; */
+    /* font: 12px 'Roboto', sans-serif; */
 }
 
 h1,
@@ -86,6 +86,10 @@ ol {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .button {
@@ -350,7 +354,7 @@ i:hover {
             filter: grayscale(15%) contrast(120%);
 }
 
-.section__banners__sale_wrapper {
+.section__banners__sale_wrapper.sale_hidden {
     display: none;
 }
 
@@ -388,7 +392,7 @@ i:hover {
         display: none;
     }
 
-    .section__banners__sale_wrapper {
+    .section__banners__sale_wrapper.sale_hidden {
         display: block;
         width: 33%;
     }
@@ -454,9 +458,13 @@ i:hover {
     }
 }
 /* -------------- SECTION NEW ARRIVALS END -------------------- */
+.section__catalogItems_block_name {
+    width: 200px;
+    font: 14px/24px 'Roboto bold';
+}
+
 .card_name {
     width: 165px;
-    font: 14px/24px 'Roboto bold';
     margin: 48px auto 20px;
     text-align: center;
 }
@@ -481,7 +489,7 @@ i:hover {
 }
 
 .section__catalogItems_block_item {
-    width: 25%;
+    /* width: 25%; */
     text-align: center;
     margin-bottom: 80px;
 }
@@ -561,6 +569,155 @@ i:hover {
     color: #f14a58;
 }
 /* -------------- SECTION CATALOG ITEMS END -------------------- */
+/* -------------- SECTION SHOPPING BAG START ------------------- */
+.block__headline{
+    padding: 15px 0 15px 90px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+.headline_text {
+    font: 26px/1 'OpenSans Bold', sans-serif;
+}
+
+.shoppingBag_items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 60px 60px 60px;
+}
+
+.shoppingBag_items_item {
+    display: flex;
+    width: 50%;
+}
+
+.section__catalogItems_block_item_description {
+    margin-left: 20px;
+}
+
+.section__catalogItems_block_price {
+    font: 16px/1 'Roboto Bold', sans-serif;
+    margin: 10px 0 30px;
+}
+
+.section__catalogItems_block_color,
+.section__catalogItems_block_size,
+.section__catalogItems_block_quantity {
+    font: 12px/24px 'Roboto', sans-serif;
+}
+
+.section__catalogItems_block_remove_item {
+    display: block;
+    font: 13px/1 'OpenSans Bold', sans-serif;
+    margin-top: 26px;
+    color: #f14a58;
+}
+
+.section__catalogItems_highlight {
+    padding: 15px 0;
+    text-align: center;
+    font: 12px/1 'OpenSans Bold', sans-serif;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f7f7f7;
+}
+
+.section_catalogItems_highlight_nextday {
+    color: #f14a58;
+}
+
+.section_catalogItems_total_empty {
+    font: 13px/1 'Roboto', sans-serif;
+}
+
+.section_catalogItems_total {
+    display: flex;
+    align-items: center;
+    padding: 30px 90px 60px 90px;
+}
+
+.section_catalogItems_total_cost {
+    text-align: right;
+}
+
+.section_catalogItems_total_cost_text {
+    font: 12px/1 'Roboto', sans-serif;
+    margin-bottom: 6px;
+}
+
+.section_catalogItems_total_cost_price{
+    font: 18px/1 'OpenSans Bold', sans-serif;
+    letter-spacing: 0.05em;
+}
+    
+/* ------------- SECTION SHOPPING BAG END ----------------- */
+
+/* ------------- SECTION ITEM START ------------------------ */
+.block__headline_backto {
+    font: 16px/1 'OpenSans Bold', sans-serif;
+}
+
+.block__headline_backto:hover {
+    color: #f14a58;
+}
+
+.secion__item_block {
+    display: flex;
+    padding: 60px 60px 160px 60px;
+}
+
+.section__item_block_photos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.section__item_block_info {
+    padding: 25px 0 0 50px;
+}
+
+.section__item_block_info_name {
+    font: 26px/1 'Roboto Bold', sans-serif;
+}
+
+.section__item_block_info_description {
+    font: italic 16px/30px 'Times New Roman', sans-serif;
+    margin-top: 20px; 
+}
+
+.section__item_block_info_description_hidden {
+    visibility: hidden;
+}
+
+.section__item_block_info_price {
+    font: 25px/1 'Roboto', sans-serif;
+    margin: 50px 0 45px 0;
+}
+
+.section__item_block_info_options_button {
+    padding: 10px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-left: 48px;
+}
+
+.section__item_block_info_options_button:active,
+.section__item_block_info_options_button:focus {
+    border: 1px solid #e5e5e5;
+}
+
+.section__item_block_info_options_text {
+    font: 12px/1 'Roboto', sans-serif;
+}
+
+.section__item_block_info_button {
+    margin-top: 30px;
+}
+
+.section__item_block_info_button_text {
+    font: 24px/1 'OpenSans Semibold', sans-serif;
+}
+/* -------------- SECTION ITEM END ------------------------- */
 
 /* ------------------- FOOTER START ---------------------------- */
 .footer__block {

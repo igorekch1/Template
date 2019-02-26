@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping bag</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <!---------- HEADER START ------------>
     <header class="header">
         <div class="header__block">
-            <h2 class="header__block_title">Template</h2>
+            <h1 class="header__block_title">Template</h1>
             <div class="header__block_singup_bag">
                 <div class="header__block_singup">
                     <a href="#">E-mail sing up</a>
@@ -20,7 +25,10 @@
                 <div class="header__block_bag">
                     <i class="fas fa-shopping-bag"></i>
                     Bag
-                    <span class="header__block_bag_counter">0</span>
+                    <span class="header__block_bag_price">
+                        £<span id="bag-price">1 640.50</span>
+                    </span>
+                    <span id="bag-counter" class="header__block_bag_counter">4</span>
                 </div>
             </div>
         </div>
@@ -44,6 +52,91 @@
         </div>
     </header>
     <!--------- HEADER END ----------->
+
+    <!-------------- SECTION SHOPPING BAG START ----------------->
+    <section class="section__shoppingBag">
+        <div class="block__headline">
+            <h2 class="headline_text">Shopping Bag</h2>
+        </div>
+        <div class="shoppingBag_items">
+            <div class="shoppingBag_items_item shoppingBag_items_item_7">
+                <div class="section__catalogItems_block_item section__catalogItems_block_item_7">
+                    <a href="./item.html">
+                        <img src="./img/catalog/catalog-photo-7.png" alt="CATALOG ITEM 7">
+                    </a>
+                </div>
+                <div class="section__catalogItems_block_item_description">
+                    <div class="section__catalogItems_block_name">Only Skinny Jeans</div>
+                    <div class="section__catalogItems_block_price">&pound;390.25</div>
+                    <div class="section__catalogItems_block_color card_color">Color: Phillipa wash</div>
+                    <div class="section__catalogItems_block_size card_size">Size: UK 17</div>
+                    <div class="section__catalogItems_block_quantity card_quantity">Quantity: 1</div>
+                    <a href="#" class="section__catalogItems_block_remove_item">Remove item</a>
+                </div>
+            </div>
+            <div class="shoppingBag_items_item shoppingBag_items_item_3">
+                <div class="section__catalogItems_block_item section__catalogItems_block_item_3">
+                    <a href="./item.html">
+                        <img src="./img/catalog/catalog-photo-3.png" alt="CATALOG ITEM 3">
+                    </a>
+                </div>
+                <div class="section__catalogItems_block_item_description">
+                    <div class="section__catalogItems_block_name">Paul & Joe Sister Jumper with Neon Trims</div>
+                    <div class="section__catalogItems_block_price">&pound;400.75</div>
+                    <div class="section__catalogItems_block_color card_color">Color: Blue</div>
+                    <div class="section__catalogItems_block_size card_size">Size: UK 18</div>
+                    <div class="section__catalogItems_block_quantity card_quantity">Quantity: 1</div>
+                    <a href="#" class="section__catalogItems_block_remove_item">Remove item</a>
+                </div>
+            </div>
+            <div class="shoppingBag_items_item shoppingBag_items_item_3">
+                <div class="section__catalogItems_block_item section__catalogItems_block_item_6">
+                    <a href="./item.html">
+                        <img src="./img/catalog/catalog-photo-6.png" alt="CATALOG ITEM 6">
+                    </a>
+                </div>
+                <div class="section__catalogItems_block_item_description">
+                    <div class="section__catalogItems_block_name">Boyfriend T-Shirt with Bohemian Print</div>
+                    <div class="section__catalogItems_block_price">&pound;360.00</div>
+                    <div class="section__catalogItems_block_color card_color">Color: Black</div>
+                    <div class="section__catalogItems_block_size card_size">Size: UK 18</div>
+                    <div class="section__catalogItems_block_quantity card_quantity">Quantity: 1</div>
+                    <a href="#" class="section__catalogItems_block_remove_item">Remove item</a>
+                </div>
+            </div>
+            <div class="shoppingBag_items_item shoppingBag_items_item_2">
+                <div class="section__catalogItems_block_item section__catalogItems_block_item_2">
+                    <a href="./item.html">
+                        <img src="./img/catalog/catalog-photo-2.png" alt="CATALOG ITEM 2">
+                    </a>
+                </div>
+                <div class="section__catalogItems_block_item_description">
+                    <div class="section__catalogItems_block_name">Turtle Neck Jumper in Rib</div>
+                    <div class="section__catalogItems_block_price">&pound;489.50</div>
+                    <div class="section__catalogItems_block_color card_color">Color: Green</div>
+                    <div class="section__catalogItems_block_size card_size">Size: UK 19</div>
+                    <div class="section__catalogItems_block_quantity card_quantity">Quantity: 1</div>
+                    <a href="#" class="section__catalogItems_block_remove_item">Remove item</a>
+                </div>
+            </div>
+        </div>
+        <div class="section__catalogItems_highlight">You've qualified for Free UK Next Day Delivery on your order.
+            Don't forget to enter the code <span class="section_catalogItems_highlight_nextday">nexday</span> at
+            checkout</div>
+        <div class="section_catalogItems_total">
+            <div class="section_catalogItems_total_empty">Empty bag</div>
+            <button class="section__catalogItems_button button">
+                <span class="section__catalogItems_button_text button_text">
+                    Buy now
+                </span>
+            </button>
+            <div class="section_catalogItems_total_cost">
+                <div class="section_catalogItems_total_cost_text">Total Cost</div>
+                <div class="section_catalogItems_total_cost_price">&pound;1 640.50</div>
+            </div>
+        </div>
+    </section>
+    <!--------------- SECTION SHOPPING BAG END ------------------>
 
     <!------------------ FOOTER START --------------------->
     <footer class="footer">
@@ -133,4 +226,5 @@
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>
