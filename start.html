@@ -10,6 +10,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
 
@@ -19,6 +20,7 @@
     <header class="header">
         <div class="header__block">
             <h1 class="header__block_title">Template</h1>
+            <h1 class="header__block_title_mobile">TL</h1>
             <div class="header__block_singup_bag">
                 <div class="header__block_singup">
                     <a href="#">E-mail sing up</a>
@@ -30,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="header__block">
+        <div class="header__block header__block_nav_wrapper">
             <nav class="header__block_nav">
                 <ul>
                     <li><a href="">Women</a></li>
@@ -44,9 +46,14 @@
                 </ul>
             </nav>
             <div class="header__block_search">
-                <input class="header__block_search_input" type="search" placeholder="Style Name">
+                <input class="header__block_search_input" type="text" placeholder="Style Name">
                 <i class="fas fa-search" id="search-icon"></i>
             </div>
+        </div>
+        <div class="header_menu_mobile">
+            <div class="header_menu_bar header_menu_bar_1"></div>
+            <div class="header_menu_bar header_menu_bar_2"></div>
+            <div class="header_menu_bar header_menu_bar_3"></div>
         </div>
     </header>
     <!--------- HEADER END ----------->
@@ -219,8 +226,7 @@
         </div>
     </footer>
     <!------------------- FOOTER END ---------------------->
+    <script src="./js/header.js"></script>
 </body>
-
-<script src="./js/script.js"></script>
 
 </html>
