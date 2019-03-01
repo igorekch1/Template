@@ -334,11 +334,11 @@ i:hover {
 
 @media screen and (max-width: 767px) {
     .section__banners {
-        width: 368px;
+        width: 375px;
     }
 
     .section__banners__nike_wrapper {
-        width: 375px;
+        width: 100%;
         height: 238px;
     }
 
@@ -347,7 +347,7 @@ i:hover {
     }
 
     .section__banners__adidas_wrapper {
-        width: 368px;
+        width: 100%;
         height: 238px;
     }
 }
@@ -496,7 +496,7 @@ i:hover {
         height: 238px;
     }
 
-    .section__catalog_banner .section__banners__repair_wrapper {
+    .section__banners__repair_wrapper {
         display: none;
     }
 
@@ -760,13 +760,43 @@ i:hover {
     display: flex;
 }
 
+.section__item_block_photos,
+.section__item_block_info {
+    width: 50%;
+}
+
 .section__item_block_photos {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+}
+
+.section__item_main_photo {
+    width: 590px;
+    height: 395px;
+}
+
+.section__item_extra_photos {
+    width: 590px;
+    height: 130px;
+}
+
+.section__item_main_photo > img {
+    width: 100%;
+    height: inherit;
+}
+
+.section__item_extra_photos > img{
+    height: inherit;
+    width: 33.33%;
+}
+
+.section__item_extra_photos {
+    display: flex;
 }
 
 .section__item_block_info {
+    display: flex;
+    flex-direction: column;
     padding: 25px 0 0 50px;
 }
 
@@ -809,6 +839,10 @@ i:hover {
     border: 1px solid #e5e5e5;
 }
 
+.section__item_block_info_options_button_text {
+    font: 14px/1 'OpenSans Bold', sans-serif;
+}
+
 .section__item_block_info_options_text {
     display: inline-block;
     width: 75px;
@@ -821,5 +855,154 @@ i:hover {
 
 .section__item_block_info_button_text {
     font: 24px/1 'OpenSans Semibold', sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .section__item_headline {
+        padding-left: 70px;
+    }
+
+    .section__item {
+        padding: 30px 40px 140px;
+    }
+
+    .secion__item_block {
+        flex-direction: column;
+    }
+
+    .section__item_block_info {
+        text-align: center;
+        padding: 20px 0 0;
+    }
+
+    .section__item_block_photos,
+    .section__item_block_info {
+        width: 100%;
+    }
+
+    .section__item_main_photo {
+        width: 510px;
+        height: 346px;
+    }
+
+    .section__item_extra_photos {
+        width: 174px;
+        height: 346px;
+        flex-direction: column;
+    }
+
+    .section__item_extra_photos > img{
+        height: 33.33%;
+        width: 100%;
+    }
+
+    .section__item_block_photo_2,
+    .section__item_block_photo_3,
+    .section__item_block_photo_4 {
+        width: 172px;
+        height: 115px;
+    }
+
+    .section__item_block_info_name {
+        font-size: 20px;
+        order: -2;
+    }
+
+    .section__item_block_info_price {
+        margin: 25px 0;
+        font-size: 18px;
+        order: -1;
+    }
+
+    .section__item_block_info_description {
+        font: italic 14px/30px 'Times New Roman', sans-serif;
+        margin: 0 auto 30px;
+        width: 430px;
+    }
+
+    .section__item_block_info_description_hidden {
+        visibility: visible;
+    }
+
+    .section__item_block_info_options + .section__item_block_info_options {
+        margin-top: 30px;
+    }
+
+    .section__item_block_info_button {
+        width: 260px;
+        margin-top: 90px;
+    }
+
+    .section__item_block_info_button_text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section__item_headline {
+        padding-left: 20px;
+    }
+
+    .section__item {
+        padding: 15px 20px 100px;
+    }
+
+    .section__item_main_photo {
+        width: 100%;
+        height: 223px;
+    }
+
+    .section__item_extra_photos {
+        flex-direction: row;
+        width: 100%;
+        height: 73px;
+    }
+
+    .section__item_extra_photos > img {
+        width: 33.33%;
+        height: 100%;
+    }
+
+    .section__item_block_info {
+        padding-top: 45px;
+    }
+
+    .section__item_block_info_description {
+        width: 100%;
+    }
+
+    .section__item_block_info_options {
+        text-align: left;
+    }
+
+    .section__item_block_info_options_text {
+        width: 55px;
+    }
+
+    .section__item_block_info_options_button {
+        width: 75px;
+    }
+
+    .section__item_block_info_options_button + .section__item_block_info_options_button {
+        margin-left: 20px;
+    }
+
+    .section__item_block_info_button {
+        width: 220px;
+        height: 60px;
+        margin-top: 50px;
+    }
+
+    .section__item_block_info_button_text {
+        font-size: 18px;
+    }
+
+    .section__banner_description_title {
+        font-size: 20px;
+    }
+
+    .section__banner_description_title_light {
+        font-size: 14px;
+    }
 }
 /* -------------- SECTION ITEM END ------------------------- */
