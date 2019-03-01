@@ -133,61 +133,6 @@ i:hover {
 }
 /* ---------------------------------------------------------- */
 
-/* ---------------- DROPDOWN START -------------------- */
-.dropdown-menu ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.dropdown-menu ul > li {
-    width: 16.66%;
-    /* padding: 20px; */
-    /* height: 65px; */
-    border: 1px solid #e5e5e5;
-}
-
-.dropdown-menu ul > li + li {
-    border-left: none;
-    /* text-align: center; */
-}
-
-.dropdown-menu ul > li > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    font: 16px/1 'OpenSans Bold', sans-serif;
-}
-
-.dropdown-menu ul > li > a > .fa-sort-down {
-    float: right;
-}
-
-.dropdown-menu li > .dropdown-content {
-    display: none;
-    position: absolute;
-    width: inherit;
-    border: 1px solid #e5e5e5;
-    background-color: #ffffff; 
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
-
-.dropdown-menu .dropdown-content > a {
-    font: 12px/1 'OpenSans Bold', sans-serif;
-    padding: 15px 0 15px 20px;
-    display: block;
-}
-
-.dropdown-menu .dropdown-content > a:hover {
-    color: #f14a58;
-    background-color: #f7f7f7;
-}
-
-.dropdown-menu .dropdown:hover .dropdown-content {
-    display: block;
-  }
-/* ---------------- DROPDOWN END ----------------------- */
 /* --------------- SECTION BANNERS START -------------------- */
 .section__banners {
     display: flex;
@@ -416,11 +361,8 @@ i:hover {
     padding-top: 60px;
 }
 
-.section__catalogItems .person_card_13 {
-    display: none;
-}
-
 .section__catalogItems_text {
+    width: 100%;
     text-align: center;
     margin-bottom: 90px;
 }
@@ -445,15 +387,13 @@ i:hover {
 @media screen and (max-width: 1024px) {
     .section__catalogItems {
         padding: 40px 40px 0 40px;
-
     }
 
-    .section__catalogItems .person_card_4 {
-        display: none;
-    }
-
-    .section__catalogItems .person_card_13 {
-        display: block;
+    .person_card_1,
+    .person_card_2,
+    .person_card_3,
+    .section__catalogItems_text {
+        order: -1;
     }
 
     .section__catalogItems_text_firstRow,
@@ -477,11 +417,21 @@ i:hover {
 }
 
 @media screen and (max-width: 767px) {
-    .person_card_3,
     .person_card_9,
     .person_card_10,
-    .person_card_11 {
+    .person_card_11,
+    .person_card_12 {
         display: none;
+    }
+
+    .person_card_1,
+    .person_card_2,
+    .section__catalogItems_text {
+        order: -1;
+    }
+
+    .person_card_3 {
+        order: 0;
     }
 
     .section__catalogItems .person_card {
@@ -948,13 +898,13 @@ i:hover {
     }
 
     .section__item_main_photo {
-        width: 100%;
+        width: 345px;
         height: 223px;
     }
 
     .section__item_extra_photos {
         flex-direction: row;
-        width: 100%;
+        width: 345px;
         height: 73px;
     }
 
