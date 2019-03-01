@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/personcard.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
 
@@ -62,80 +63,106 @@
     <section class="slider"></section>
     <!-- SECTION SLIDER END -->
 
-    <!----------- SECTION BANNERS START -------------------->
-    <section class="section__banners">
-        <a href="./item.html" class="section__banners__nike_wrapper">
-            <div class="section__banners_nike">
-                <div class="section__banner_description">
-                    <h3 class="section__banner_description_title">Nike Red</h3>
-                    <div class="section__banner_description_fiture">New</div>
-                </div>
-                <img class="section__banners_nike_image" src="./img/start/nike-red.png" alt="NIKE RED">
+    <main>
+        <!----------- SECTION BANNERS START -------------------->
+        <section class="section__banners">
+            <div class="section__banners__nike_wrapper">
+                <a href="./item.html">
+                    <img class="section__banners_nike_image" src="./img/start/nike-red.png" alt="NIKE RED">
+                    <div class="section__banner_description">
+                        <h3 class="section__banner_description_title">Nike Red</h3>
+                        <div class="section__banner_description_fiture">New</div>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="./catalog.html" class="section__banners__capsNhats_wrapper">
-            <div class="section__banners__capsNhats">
-                <div class="section__banner_description">
-                    <h3 class="section__banner_description_title">Caps & Hats</h3>
-                    <div class="section__banner_description_fiture">Sale -50%</div>
-                </div>
-                <img class="section__banners_capsNhats_image" src="./img/start/capsNhats.png" alt="CAPS & HATS">
+            <div class="section__banners__capsNhats_wrapper">
+                <a href="./catalog.html">
+                    <div class="section__banner_description">
+                        <h3 class="section__banner_description_title">Caps & Hats</h3>
+                        <div class="section__banner_description_fiture">Sale -50%</div>
+                    </div>
+                    <img class="section__banners_capsNhats_image" src="./img/start/capsNhats.png" alt="CAPS & HATS">
+                </a>
             </div>
-        </a>
-        <a href="#" class="section__banners__sale_wrapper sale_hidden">
-            <div class="section__banners__sale">
-                <img class="section__banners_capsNhats_image" src="./img/start/suitcase.png" alt="SUITCASE">
-                <div class="section__banner_description sale_description">
-                    <h3 class="section__banner_description_title sale_title">Sale</h3>
-                    <div class="section__banner_description_fiture sale_fiture">-70%</div>
-                </div>
+            <div class="section__banners__sale_wrapper sale_hidden">
+                <a href="#">
+                    <img class="section__banners_capsNhats_image" src="./img/start/suitcase.png" alt="SUITCASE">
+                    <div class="section__banner_description sale_description">
+                        <h3 class="section__banner_description_title sale_title">Sale</h3>
+                        <div class="section__banner_description_fiture sale_fiture">-70%</div>
+                    </div>
+                </a>
             </div>
-        </a>
-    </section>
-    <!------------ SECTION BANNERS END --------------------->
+        </section>
+        <!------------ SECTION BANNERS END --------------------->
 
-    <!----------- SECTION NEW ARRIVALS START -------------->
-    <section class="section__newArrivals">
-        <h1>New arrivals</h1>
+        <!----------- SECTION NEW ARRIVALS START -------------->
+        <section class="section__newArrivals">
+            <h1 class="section__newArrivals_h1">New arrivals</h1>
 
-        <div class="section__newArrivals_rowPeople">
-            <div class="section__newArrivals_rowPeople_card person_card_1">
-                <div class="section__newArrivals_image_wrapper">
-                    <img src="./img/start/new-arrivals-photo-1.png" alt="Arrivals-photo-1">
+            <div class="people_card_block">
+                <div class="person_card person_card_1">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/start/new-arrivals-photo-1.png" alt="Arrivals-photo-1" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__newArrivals_name card_name">Straight Leg Jeans</div>
+                    <div class="section__newArrivals_price card_price">&pound;55.00</div>
                 </div>
-                <div class="section__newArrivals_name card_name">Straight Leg Jeans</div>
-                <div class="section__newArrivals_price card_price">&pound;55.00</div>
-            </div>
-            <div class="section__newArrivals_rowPeople_card person_card_2">
-                <div class="section__newArrivals_image_wrapper">
-                    <img src="./img/start/new-arrivals-photo-2.png" alt="Arrivals-photo-2">
+                <div class="person_card person_card_2">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/start/new-arrivals-photo-2.png" alt="Arrivals-photo-2" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__newArrivals_name card_name">Boyfriend T-Shirt with Bohemian Print</div>
+                    <div class="section__newArrivals_price card_price">&pound;34.25</div>
                 </div>
-                <div class="section__newArrivals_name card_name">Boyfriend T-Shirt with Bohemian Print</div>
-                <div class="section__newArrivals_price card_price">&pound;34.25</div>
-            </div>
-            <div class="section__newArrivals_rowPeople_card person_card_3">
-                <div class="section__newArrivals_image_wrapper">
-                    <img src="./img/start/new-arrivals-photo-3.png" alt="Arrivals-photo-3">
+                <div class="person_card person_card_3">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/start/new-arrivals-photo-3.png" alt="Arrivals-photo-3" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_name">Only Busted Knee Jean</div>
+                    <div class="card_price">&pound;140.50</div>
                 </div>
-                <div class="section__newArrivals_name card_name">Only Busted Knee Jeans</div>
-                <div class="section__newArrivals_price card_price">&pound;140.50</div>
-            </div>
-            <div class="section__newArrivals_rowPeople_card person_card_4">
-                <div class="section__newArrivals_image_wrapper">
-                    <img src="./img/start/new-arrivals-photo-4.png" alt="Arrivals-photo-4">
+                <div class="person_card person_card_4">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/start/new-arrivals-photo-4.png" alt="Arrivals-photo-4" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__newArrivals_name card_name">Only Skinny Jeans</div>
+                    <div class="section__newArrivals_price card_price">&pound;12.75</div>
                 </div>
-                <div class="section__newArrivals_name card_name">Only Skinny Jeans</div>
-                <div class="section__newArrivals_price card_price">&pound;12.75</div>
             </div>
-        </div>
 
-        <button class="section__newArrivals_button button">
-            <span class="section__newArrivals_button_text button_text">
-                All arrivals
-            </span>
-        </button>
-    </section>
-    <!----------- SECTION NEW ARRIVALS END  --------------->
+            <button class="section__newArrivals_button button">
+                <span class="section__newArrivals_button_text button_text">
+                    All arrivals
+                </span>
+            </button>
+        </section>
+        <!----------- SECTION NEW ARRIVALS END  --------------->
+    </main>
 
     <!------------------ FOOTER START --------------------->
     <footer class="footer">

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/personcard.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
 
@@ -59,254 +60,336 @@
 
     <!-------------------- DROPDOWN START ----------------------->
     <main>
-    <div class="dropdown-menu">
-        <ul>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Fashion
-                    <i class="fas fa-sort-down"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#">Not Selected</a>
-                    <a href="#">Black</a>
-                    <a href="#">Blue</a>
-                    <a href="#">Red</a>
-                    <a href="#">Green</a>
-                    <a href="#">Golden</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Product Type
-                    <i class="fas fa-sort-down"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#">Not Selected</a>
-                    <a href="#">Black</a>
-                    <a href="#">Blue</a>
-                    <a href="#">Red</a>
-                    <a href="#">Green</a>
-                    <a href="#">Golden</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Color
-                    <i class="fas fa-sort-down"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#">Not Selected</a>
-                    <a href="#">Black</a>
-                    <a href="#">Blue</a>
-                    <a href="#">Red</a>
-                    <a href="#">Green</a>
-                    <a href="#">Golden</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Brand
-                    <i class="fas fa-sort-down"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#">Not Selected</a>
-                    <a href="#">Black</a>
-                    <a href="#">Blue</a>
-                    <a href="#">Red</a>
-                    <a href="#">Green</a>
-                    <a href="#">Golden</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Size
-                    <i class="fas fa-sort-down"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#">Not Selected</a>
-                    <a href="#">Black</a>
-                    <a href="#">Blue</a>
-                    <a href="#">Red</a>
-                    <a href="#">Green</a>
-                    <a href="#">Golden</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Price range
-                    <i class="fas fa-sort-down"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#">Not Selected</a>
-                    <a href="#">Black</a>
-                    <a href="#">Blue</a>
-                    <a href="#">Red</a>
-                    <a href="#">Green</a>
-                    <a href="#">Golden</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-------------------- DROPDOWN END ------------------------->
+        <div class="dropdown-menu">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Fashion
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Not Selected</a>
+                        <a href="#">Black</a>
+                        <a href="#">Blue</a>
+                        <a href="#">Red</a>
+                        <a href="#">Green</a>
+                        <a href="#">Golden</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Product Type
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Not Selected</a>
+                        <a href="#">Black</a>
+                        <a href="#">Blue</a>
+                        <a href="#">Red</a>
+                        <a href="#">Green</a>
+                        <a href="#">Golden</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Color
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Not Selected</a>
+                        <a href="#">Black</a>
+                        <a href="#">Blue</a>
+                        <a href="#">Red</a>
+                        <a href="#">Green</a>
+                        <a href="#">Golden</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Brand
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Not Selected</a>
+                        <a href="#">Black</a>
+                        <a href="#">Blue</a>
+                        <a href="#">Red</a>
+                        <a href="#">Green</a>
+                        <a href="#">Golden</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Size
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Not Selected</a>
+                        <a href="#">Black</a>
+                        <a href="#">Blue</a>
+                        <a href="#">Red</a>
+                        <a href="#">Green</a>
+                        <a href="#">Golden</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Price range
+                        <i class="fas fa-sort-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Not Selected</a>
+                        <a href="#">Black</a>
+                        <a href="#">Blue</a>
+                        <a href="#">Red</a>
+                        <a href="#">Green</a>
+                        <a href="#">Golden</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-------------------- DROPDOWN END ------------------------->
 
-    <!----------------- SECTION CATALOG ITEMS START -------------->
-    <section class="section__catalogItems">
-        <div class="section__catalogItems_block">
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_1">
+        <!----------------- SECTION CATALOG ITEMS START -------------->
+        <section class="section__catalogItems">
+            <div class="people_card_block">
+                <div class="person_card person_card_1">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+
+                            <img src="./img/catalog/catalog-photo-1.png" alt="CATALOG ITEM 1" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Only Skinny Jeans</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;65.50</div>
+                </div>
+                <div class="person_card person_card_2">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-2.png" alt="CATALOG ITEM 2" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Neck Knitted Jumper</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;76.25</div>
+                </div>
+                <div class="person_card person_card_3">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-3.png" alt="CATALOG ITEM 3" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Turtle Neck Jumper in Rib</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;130.25
+                        <span class="card_feature">New</span>
+                    </div>
+                </div>
+                <div class="person_card person_card_4">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-4.png" alt="CATALOG ITEM 4" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">With Patchwork Crochet</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;80.60</div>
+                </div>
+            </div>
+
+            <div class="section__catalogItems_text">
+                <div class="section__catalogItems_text_firstRow">
+                    Last weekend <span class="section__catalogItems_text_firstRow_extra">extra 50%</span> off on all
+                    reduced boots and shoulder bags
+                </div>
+                <div class="section__catalogItems_text_secondRow">
+                    This offer is valid in-store and online. Prices displayed reflect this additional discount. This
+                    offer
+                    ends at 11:59 GMT on March 1st 2015
+                </div>
+            </div>
+
+            <div class="people_card_block">
+                <div class="person_card person_card_13">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-13.png" alt="CATALOG ITEM 13" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">With Patchwork</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;80.60</div>
+                </div>
+                <div class="person_card person_card_5">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-5.png" alt="CATALOG ITEM 5" class="person_card_image">
+                            <div class="card_image_text">
+                                <h4 class="card_image_text_title">Levi's</h4>
+                                <div class="card_image_text_description">Buyer's choice</div>
+                            </div>
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Levi's Jeans for women</div>
+                    <div class="section__catalogItems_block_price card_price">
+                        <span class="card_feature">More colours</span>
+                    </div>
+                </div>
+                <div class="person_card person_card_6">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-6.png" alt="CATALOG ITEM 6" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="section__catalogItems_block_name card_name">Boyfriend T-shirt with Bohemian Print</div>
+                    <div class="section__catalogItems_block_price card_price">
+                        <span class="card_feature">&pound;120.00 -25%</span>
+                        &pound;90.00
+                    </div>
+                </div>
+                <div class="person_card person_card_7">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-7.png" alt="CATALOG ITEM 7" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Colour Black</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;550.50</div>
+                </div>
+                <div class="person_card person_card_8">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-8.png" alt="CATALOG ITEM 8" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Monki Festival Knitted</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;24.75</div>
+                </div>
+                <div class="person_card person_card_9">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-9.png" alt="CATALOG ITEM 9" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Oversized Cardigan</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;90.00</div>
+                </div>
+                <div class="person_card person_card_10">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-10.png" alt="CATALOG ITEM 10" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Paul & Joe Sister Jumper with Neon Trims</div>
+                    <div class="section__catalogItems_block_price card_price">
+                        &pound;19.75
+                        <span class="card_feature">New</span>
+                    </div>
+                </div>
+                <div class="person_card person_card_11">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-11.png" alt="CATALOG ITEM 11" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Only Busted Knee Jean</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;140.50</div>
+                </div>
+                <div class="person_card person_card_12">
+                    <div class="person_card_image_wrapper">
+                        <a href="./item.html">
+                            <img src="./img/catalog/catalog-photo-12.png" alt="CATALOG ITEM 12" class="person_card_image">
+                            <div class="person_card_viewItem_background"></div>
+                            <div class="person_card_viewItem_text">
+                                View item
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section__catalogItems_block_name card_name">Boyfriend T-shirt with Bohemian Print</div>
+                    <div class="section__catalogItems_block_price card_price">&pound;85.75</div>
+                </div>
+            </div>
+
+            <button class="section__catalogItems_button button">
+                <span class="section__catalogItems_button_text button_text">
+                    Show more
+                </span>
+            </button>
+        </section>
+        <!------------------ SECTION CATALOG ITEMS END --------------->
+
+        <!------------------ SECTION BANNERS START ------------------->
+        <section class="section__banners section__catalog_banner">
+            <div class="section__banners__adidas_wrapper">
                 <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-1.png" alt="CATALOG ITEM 1">
-                    <div class="section__catalogItems_viewItem">
-                        <div class="section__catalogItems_viewItem_text">
-                            View item
-                        </div>
+                    <div class="section__banner_description">
+                        <h3 class="section__banner_description_title section__banner_description_title_light">Adidas
+                            Blue</h3>
+                        <div class="section__banner_description_fiture section__banner_description_fiture_light">For
+                            men</div>
+                    </div>
+                    <img class="section__banners_adidas_image" src="./img/catalog/adidas-blue.png" alt="ADIDAS BLUE">
+                </a>
+            </div>
+            <div class="section__banners__repair_wrapper">
+                <a href="./item.html">
+                    <img class="section__banners_repairPatches_image" src="./img/catalog/repair-patches.png" alt="Repair Patches">
+                    <div class="section__banners_block_item_text">
+                        <h4 class="section__banners_block_item_text_title">Repair Patches</h4>
+                        <div class="section__banners_block_item_text_description">&pound;150.50</div>
                     </div>
                 </a>
-                <div class="section__catalogItems_block_name card_name">Only Skinny Jeans</div>
-                <div class="section__catalogItems_block_price card_price">&pound;65.50</div>
             </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_2">
+            <div class="section__banners__sale_wrapper sale_visible">
                 <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-2.png" alt="CATALOG ITEM 2">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Neck Knitted Jumper</div>
-                <div class="section__catalogItems_block_price card_price">&pound;76.25</div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_3">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-3.png" alt="CATALOG ITEM 3">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Turtle Neck Jumper in Rib</div>
-                <div class="section__catalogItems_block_price card_price">&pound;130.25
-                    <span class="section__catalogItems_feature">New</span>
-                </div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_4 section__catalogItems_block_item_tablet_none">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-4.png" alt="CATALOG ITEM 4">
-                </a>
-                <div class="section__catalogItems_block_name card_name">With Patchwork Crochet</div>
-                <div class="section__catalogItems_block_price card_price">&pound;80.60</div>
-            </div>
-        </div>
-        <div class="section__catalogItems_text">
-            <div class="section__catalogItems_text_firstRow">
-                Last weekend <span class="section__catalogItems_text_firstRow_extra">extra 50%</span> off on all
-                reduced boots and shoulder bags
-            </div>
-            <div class="section__catalogItems_text_secondRow">
-                This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer
-                ends at 11:59 GMT on March 1st 2015
-            </div>
-        </div>
-        <div class="section__catalogItems_block">
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_5">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-5.png" alt="CATALOG ITEM 5">
-                    <div class="section__catalogItems_block_item_text">
-                        <h4 class="section__catalogItems_block_item_text_title">Levi's</h4>
-                        <div class="section__catalogItems_block_item_text_description">Buyer's choice</div>
+                    <img class="" src="./img/catalog/sale.png" alt="SUITCASE">
+                    <div class="section__banner_description sale_description">
+                        <h3 class="section__banner_description_title sale_title">Sale</h3>
+                        <div class="section__banner_description_fiture sale_fiture">-70%</div>
                     </div>
                 </a>
-                <div class="section__catalogItems_block_name card_name">Levi's Jeans for women</div>
-                <div class="section__catalogItems_block_price card_price">
-                    <span class="section__catalogItems_feature">More colours</span>
-                </div>
             </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_6">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-6.png" alt="CATALOG ITEM 6">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Boyfriend T-shirt with Bohemian Print</div>
-                <div class="section__catalogItems_block_price card_price">
-                    <span class="section__catalogItems_feature">&pound;120.00 -25%</span>
-                    &pound;90.00</div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_7">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-7.png" alt="CATALOG ITEM 7">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Colour Black</div>
-                <div class="section__catalogItems_block_price card_price">&pound;550.50</div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_8">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-8.png" alt="CATALOG ITEM 8">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Monki Festival Knitted</div>
-                <div class="section__catalogItems_block_price card_price">&pound;24.75</div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_9">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-9.png" alt="CATALOG ITEM 9">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Oversized Cardigan</div>
-                <div class="section__catalogItems_block_price card_price">&pound;90.00</div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_10">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-10.png" alt="CATALOG ITEM 10">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Paul & Joe Sister Jumper with Neon Trims</div>
-                <div class="section__catalogItems_block_price card_price">
-                    &pound;19.75
-                    <span class="section__catalogItems_feature">New</span>
-                </div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_11">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-11.png" alt="CATALOG ITEM 11">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Only Busted Knee Jean</div>
-                <div class="section__catalogItems_block_price card_price">&pound;140.50</div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_12">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-12.png" alt="CATALOG ITEM 12">
-                </a>
-                <div class="section__catalogItems_block_name card_name">Boyfriend T-shirt with Bohemian Print</div>
-                <div class="section__catalogItems_block_price card_price">&pound;85.75</div>
-            </div>
-            <div class="section__catalogItems_block_item section__catalogItems_block_item_13 section__catalogItems_block_item_desktop_none">
-                <a href="./item.html">
-                    <img src="./img/catalog/catalog-photo-13.png" alt="CATALOG ITEM 13">
-                </a>
-                <div class="section__catalogItems_block_name card_name">With Patchwork</div>
-                <div class="section__catalogItems_block_price card_price">&pound;80.60</div>
-            </div>
-        </div>
-        <button class="section__catalogItems_button button">
-            <span class="section__catalogItems_button_text button_text">
-                Show more
-            </span>
-        </button>
-    </section>
-    <!------------------ SECTION CATALOG ITEMS END --------------->
-
-    <!------------------ SECTION BANNERS START ------------------->
-    <section class="section__banners">
-        <a href="./item.html" class="section__banners__adidas_wrapper">
-            <div class="section__banners__adidas">
-                <div class="section__banner_description">
-                    <h3 class="section__banner_description_title section__banner_description_title_light">Adidas Blue</h3>
-                    <div class="section__banner_description_fiture section__banner_description_fiture_light">For men</div>
-                </div>
-                <img class="section__banners_adidas_image" src="./img/catalog/adidas-blue.png" alt="ADIDAS BLUE">
-            </div>
-        </a>
-        <a href="./item.html" class="section__banners__repair_wrapper">
-            <div class="section__banners__repair">
-                <img class="section__banners_repairPatches_image" src="./img/catalog/repair-patches.png" alt="Repair Patches">
-                <div class="section__banners_block_item_text">
-                    <h4 class="section__banners_block_item_text_title">Repair Patches</h4>
-                    <div class="section__banners_block_item_text_description">&pound;150.50</div>
-                </div>
-            </div>
-        </a>
-        <a href="./item.html" class="section__banners__sale_wrapper sale_visible">
-            <div class="section__banners__sale">
-                <img class="" src="./img/catalog/sale.png" alt="SUITCASE">
-                <div class="section__banner_description sale_description">
-                    <h3 class="section__banner_description_title sale_title">Sale</h3>
-                    <div class="section__banner_description_fiture sale_fiture">-70%</div>
-                </div>
-            </div>
-        </a>
-    </section>
-</main>
+        </section>
+    </main>
     <!------------------ SECTION BANNERS END --------------------->
 
     <!------------------ FOOTER START --------------------->

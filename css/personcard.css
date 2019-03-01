@@ -1,0 +1,148 @@
+.people_card_block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.person_card {
+    margin-bottom: 80px;
+}
+
+.person_card_image_wrapper {
+    width: 240px;
+    height: 340px
+}
+
+.person_card_image_wrapper > a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+
+.person_card_image {
+    width: inherit;
+    height: inherit;
+}
+
+.person_card_viewItem_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s, opacity 0.3s linear;
+}
+
+.person_card_viewItem_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -48px;
+    font: 22px/1 'OpenSans Bold', sans-serif;
+    color: #f14a58;
+    z-index: 999;
+    visibility: hidden;
+    transition: visibility .3s, opacity 0.3s ease-in;
+}
+
+.person_card:hover .person_card_viewItem_background {
+    visibility: visible;
+    opacity: .5;
+}
+
+.person_card:hover .person_card_viewItem_text {
+    visibility: visible;
+}
+
+.person_card:hover .card_name, 
+.person_card:hover .section__shoppingBag_block_name {
+    color: #f14a58;
+}
+
+.card_name {
+    font: 14px/24px 'Roboto bold', sans-serif;
+    width: 165px;
+    margin: 48px auto 20px;
+    text-align: center;
+}
+
+.card_price {
+    font: 14px/1 'Roboto', sans-serif;
+}
+
+.card_name,
+.card_price {
+    text-align: center;
+}
+
+.card_description {
+    margin-left: 20px;
+    padding-top: 7px;
+}
+
+.card_color,
+.card_size,
+.card_quantity {
+    font: 12px/24px 'Roboto', sans-serif;
+}
+
+.card_image_text {
+    position: absolute;
+    top: 72%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.card_image_text_title{
+    font: 30px/1 'OpenSans Bold', sans-serif;
+    letter-spacing: 0.03em;
+    margin-bottom: 15px;
+}
+
+.card_image_text_description {
+    font: italic 16px/1 'Times New Roman';
+}
+
+.card_feature {
+    font: italic 16px/1 'Times New Roman';
+    margin: 0 8px 0 4px;
+    color: #757575;
+}
+
+@media screen and (max-width:1024px) {
+    .people_card_block {
+        width: 688px;
+        margin: 0 auto;
+    }
+
+    .person_card_image_wrapper{
+        width: 204px;
+        height: 289px;
+    }
+
+    .card_name {
+        font: 14px/20px 'Roboto bold', sans-serif;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .people_card_block {
+        width: 331px;
+        /* margin: 0 auto; */
+    }
+
+    .person_card_image_wrapper{
+        width: 158px;
+        height: 223px;
+    }
+
+    .card_name {
+        font: 14px/16px 'Roboto bold', sans-serif;
+    }
+}
