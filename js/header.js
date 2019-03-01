@@ -21,3 +21,12 @@ menu.addEventListener("click", function(e){
     this.classList.toggle("cross");
     nav.classList.toggle("active_list");
 });
+
+let btns = document.querySelectorAll(".section__item_block_info_options_button");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("selected");
+    current[0].className = current[0].className.replace(" selected", "");
+    this.className += " selected";
+    });
+  }

@@ -92,6 +92,8 @@ button {
     cursor: pointer;
 }
 
+.header,
+.footer__block,
 .section__newArrivals,
 .section__catalogItems,
 .section__shoppingBag_people_card,
@@ -109,15 +111,12 @@ button {
     margin: 0 auto;
     background: none;
     color: #000000;
-    border: 1px solid #e5e5e5;
+    border: none;
+    /* border: 1px solid #e5e5e5; */
     transition: all .5s ease;
-    /* transition: color 1s, border 1s; */
 }
 
-/* TODO: BORDER ON ACTIVE */
-.button:hover,
-.button:active,
-.button:focus {
+.button:hover {
     cursor: pointer;
     color: #f14a58;
     border: 1px solid #f14a58;
@@ -135,20 +134,19 @@ i:hover {
 
 /* --------------- SECTION BANNERS START -------------------- */
 .section__banners {
-    display: flex;
-    max-width: 1300px;
-    margin: 0 auto;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5; 
 }
 
-.section__banners > div + div {
-    border-left: 1px solid #e5e5e5;
+.section__banners_wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.section__banners__nike_wrapper,
-.section__banners__capsNhats_wrapper {
-    /* width: 50%; */
+.section__banners_wrapper > div + div {
+    border-left: 1px solid #e5e5e5;
 }
 
 .section__banners a {
@@ -159,8 +157,8 @@ i:hover {
 }
 
 .section__banners img {
-    /* width: inherit; */
     height: inherit;
+    width: inherit;
 } 
 
 .section__banner_description {
@@ -226,8 +224,8 @@ i:hover {
 }
 
 @media screen and (max-width: 1024px){
-    .section__banners {
-        width: 768px;
+    .section__banners_wrapper {
+        /* width: 746px; */
     }
 
     .section__banners > a {
@@ -235,7 +233,7 @@ i:hover {
     }
 
     .section__banners__nike_wrapper {
-        width: 510px;
+        width: 438px;
         height: 250px;
     }
 
@@ -247,10 +245,6 @@ i:hover {
     .section__banners__repair_wrapper {
         width: 255px;
         height: 250px;
-    }
-
-    .section__banners img {
-        width: inherit;
     }
 
     .section__banner_description_title {
@@ -278,22 +272,22 @@ i:hover {
 }
 
 @media screen and (max-width: 767px) {
-    .section__banners {
+    .section__banners__adidas_wrapper {
         width: 375px;
+        height: 237px;
     }
 
     .section__banners__nike_wrapper {
-        width: 100%;
+        width: 375px;
         height: 238px;
+    }
+
+    .section__banners_nike_image {
+        width: inherit;
     }
 
     .section__banners__sale_wrapper.sale_hidden {
         display: none;
-    }
-
-    .section__banners__adidas_wrapper {
-        width: 100%;
-        height: 238px;
     }
 }
 /* ---------------- SECTION BANNERS END --------------------- */
@@ -399,7 +393,7 @@ i:hover {
     .section__catalogItems_text_firstRow,
     .section__catalogItems_text_secondRow {
         width: 560px;
-        margin: 0 auto;
+        margin: 10px auto 0;
     }
 
     .section__catalogItems_block_item_desktop_none {
@@ -708,6 +702,7 @@ i:hover {
 
 .secion__item_block {
     display: flex;
+    justify-content: center;
 }
 
 .section__item_block_photos,
@@ -783,9 +778,13 @@ i:hover {
     margin-left: 30px;
 }
 
-.section__item_block_info_options_button:hover,
 .section__item_block_info_options_button:active,
-.section__item_block_info_options_button:focus {
+.section__item_block_info_options_button:focus,
+.section__item_block_info_options_button:hover {
+    border: 1px solid #e5e5e5;
+}
+
+.section__item_block_info_options_button.selected {
     border: 1px solid #e5e5e5;
 }
 
@@ -825,18 +824,23 @@ i:hover {
         padding: 20px 0 0;
     }
 
+    .section__item_block_photos {
+        display: flex;
+        justify-content: center;
+    }
+
     .section__item_block_photos,
     .section__item_block_info {
         width: 100%;
     }
 
     .section__item_main_photo {
-        width: 510px;
+        width: 505px;
         height: 346px;
     }
 
     .section__item_extra_photos {
-        width: 174px;
+        width: 166px;
         height: 346px;
         flex-direction: column;
     }
@@ -897,14 +901,23 @@ i:hover {
         padding: 15px 20px 100px;
     }
 
+    .section__item_block_photos {
+        flex-direction: column;
+    }
+
+    
+    .section__item_block_photos > div {
+        margin: 0 auto;
+    }
+
     .section__item_main_photo {
-        width: 345px;
+        width: 334px;
         height: 223px;
     }
 
     .section__item_extra_photos {
         flex-direction: row;
-        width: 345px;
+        width: 334px;
         height: 73px;
     }
 

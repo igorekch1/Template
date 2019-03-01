@@ -189,6 +189,7 @@
         height: 600px;
         padding: 0;
         border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
     }
 
     .header__block_nav {
