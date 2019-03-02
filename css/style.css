@@ -772,6 +772,7 @@ i:hover {
     height: 40px;
     border: 1px solid #fff;
     background-color: #fff;
+    outline: none;
 }
 
 .section__item_block_info_options_button + .section__item_block_info_options_button {
