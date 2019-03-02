@@ -639,7 +639,7 @@ i:hover {
     .card_size, 
     .card_quantity {
         font-size: 10px;
-        line-height: 20pxs;
+        line-height: 20px;
     }
 
     .section__shoppingBag_block_remove_item {
@@ -717,7 +717,7 @@ i:hover {
 
 .section__item_main_photo {
     width: 590px;
-    height: 395px;
+    height: 393px;
 }
 
 .section__item_extra_photos {
@@ -727,16 +727,42 @@ i:hover {
 
 .section__item_main_photo > img {
     width: 100%;
+    height: 100%;
+}
+
+.section__item_photo_wrapper {
+    position: relative;
+    width: 33.33%;
     height: inherit;
 }
 
-.section__item_extra_photos > img{
-    height: inherit;
-    width: 33.33%;
+.section__item_photo_wrapper > img{
+    height: 100%;
+    width: 100%;
 }
 
 .section__item_extra_photos {
     display: flex;
+}
+
+.section__item_photo_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.section__item_photo_background:hover {
+    opacity: .5;
+}
+
+.section__item_photo_background.active {
+    opacity: .5;
 }
 
 .section__item_block_info {
@@ -846,16 +872,9 @@ i:hover {
         flex-direction: column;
     }
 
-    .section__item_extra_photos > img{
+    .section__item_photo_wrapper{
         height: 33.33%;
         width: 100%;
-    }
-
-    .section__item_block_photo_2,
-    .section__item_block_photo_3,
-    .section__item_block_photo_4 {
-        width: 172px;
-        height: 115px;
     }
 
     .section__item_block_info_name {
@@ -922,7 +941,7 @@ i:hover {
         height: 73px;
     }
 
-    .section__item_extra_photos > img {
+    .section__item_photo_wrapper {
         width: 33.33%;
         height: 100%;
     }
