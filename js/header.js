@@ -43,21 +43,17 @@ for (let i = 0; i < dropdown.length; i++) {
         if (target) target.style = "";
         target = e.target;
         if (target.parentNode.className === "dropdown-content") {
-            target.style = `
-                background-color: #e5e5e5;
-                color: #f14a58;
-            `;
+            target.style = "background-color: #e5e5e5; color: #f14a58;";
             if (target.innerHTML !== "Not Selected") {
-                dropdown[i].children[0].style = "padding: 10px 20px;";
-                dropdown[i].querySelector(".dropbtn-name").style = "font: 12px/1 'Roboto Bold', sans-serif;"
-                dropdown[i].style = "background-color: #e5e5e5";
-                dropdown[i].children[0].lastElementChild.innerHTML = target.textContent;
+                this.children[0].style.padding = "10px 20px";
+                this.querySelector(".dropbtn-name").style.font = "12px/1 'Roboto Bold', sans-serif"
+                this.style.backgroundColor = "#e5e5e5";
+                this.children[0].lastElementChild.innerHTML = target.textContent;
             } else {
-                dropdown[i].children[0].style = "padding: 20px;";
-                dropdown[i].querySelector(".dropbtn-name").style = "font: 16px/1 'OpenSans Bold', sans-serif;"
-                dropdown[i].style = "background-color: #none";  
-                
-                dropdown[i].children[0].lastElementChild.innerHTML = "";
+                this.children[0].style.padding = "20px";
+                this.querySelector(".dropbtn-name").style.font = "16px/1 'OpenSans Bold', sans-serif"
+                this.style.backgroundColor = "#fff";  
+                this.children[0].lastElementChild.innerHTML = "";
             }
         }
     });
