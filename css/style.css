@@ -112,7 +112,7 @@ button {
     background: none;
     color: #000000;
     border: none;
-    /* border: 1px solid #e5e5e5; */
+    border: 1px solid #e5e5e5;
     transition: all .5s ease;
 }
 

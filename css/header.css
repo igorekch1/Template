@@ -37,11 +37,11 @@
     margin-right: 15px;
 }
 
-.header__block_bag_counter::before {
+#bag_counter::before {
     content: "(";
 }
 
-.header__block_bag_counter::after {
+#bag_counter::after {
     content: ")";
 }
 
