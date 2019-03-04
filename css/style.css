@@ -498,6 +498,9 @@ i:hover {
 
 .section__shoppingBag_block_remove_item {
     display: block;
+    border: none;
+    outline: none;
+    background: none;
     font: 13px/1 'OpenSans Bold', sans-serif;
     margin-top: 26px;
     color: #f14a58;
@@ -516,8 +519,13 @@ i:hover {
     color: #f14a58;
 }
 
-.section__shoppingBag_total_empty {
+.clear_bag {
     font: 13px/1 'Roboto Bold', sans-serif;
+}
+
+.clear_bag:hover {
+    cursor: pointer;
+    color: #f14a58;
 }
 
 .section__shoppingBag_total {
@@ -541,6 +549,16 @@ i:hover {
 }
 
 .section_catalogItems_highlight_nextday {
+    color: #f14a58;
+}
+
+.section__shoppingBag_button {
+    font: 24px/1 'OpenSans Bold', sans-serif;
+}
+
+.empty_bag_text { 
+    font: 24px/1 'OpenSans Bold', sans-serif;
+    text-align: center;
     color: #f14a58;
 }
 
@@ -592,6 +610,7 @@ i:hover {
 
     .section__shoppingBag_button {
         width: 260px;
+        font-size: 20px;
     }
 
     .section__shoppingBag_total_cost_price {
@@ -662,7 +681,7 @@ i:hover {
         width: 90px;
     }
 
-    .section__shoppingBag_total_empty,
+    .clear_bag,
     .section__shoppingBag_total_cost_text {
         font-size: 10px;
     }
@@ -670,6 +689,7 @@ i:hover {
     .section__shoppingBag_button {
         width: 140px;
         height: 60px;
+        font-size: 18px;
     }
 
     .button_text{
@@ -800,6 +820,7 @@ i:hover {
     border: 1px solid #fff;
     background-color: #fff;
     outline: none;
+    font: 14px/1 'OpenSans Bold', sans-serif
 }
 
 .section__item_block_info_options_button + .section__item_block_info_options_button {
@@ -814,10 +835,6 @@ i:hover {
 
 .section__item_block_info_options_button.selected {
     border: 1px solid #e5e5e5;
-}
-
-.section__item_block_info_options_button_text {
-    font: 14px/1 'OpenSans Bold', sans-serif;
 }
 
 .section__item_block_info_options_text {

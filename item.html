@@ -27,7 +27,8 @@
                 <div class="header__block_bag">
                     <i class="fas fa-shopping-bag"></i>
                     Bag
-                    <span id="bag_counter">0</span>
+                    <span calss="header_block_bag_price">&pound;<span id="bag_price">1640.50</span></span>
+                    <span id="bag_counter">4</span>
                 </div>
             </div>
         </div>
@@ -84,7 +85,7 @@
                     </div>
                 </div>
                 <div class="section__item_block_info">
-                    <div class="section__item_block_info_name">
+                    <div class="section__item_block_info_name" id="item-name">
                         Dark classic fit suit
                     </div>
                     <div class="section__item_block_info_description">
@@ -93,28 +94,18 @@
                         <span class="section__item_block_info_description_hidden">and a subtle stripe pattern
                             throughout.</span>
                     </div>
-                    <div class="section__item_block_info_price">&pound;180.60</div>
+                    <div class="section__item_block_info_price">&pound; <span id="item-price">180.60</span></div>
                     <div class="section__item_block_info_options_wrapper">
                         <div class="section__item_block_info_options section__item_block_info_options_size">
                             <span class="section__item_block_info_options_text">Size:</span>
-                            <button class="section__item_block_info_options_button selected">
-                                <span class="section__item_block_info_options_button_text">UK 52</span>
-                            </button>
-                            <button class="section__item_block_info_options_button">
-                                <span class="section__item_block_info_options_button_text">UK 54</span>
-                            </button>
-                            <button class="section__item_block_info_options_button">
-                                <span class="section__item_block_info_options_button_text">UK 56</span>
-                            </button>
+                            <button class="section__item_block_info_options_button section__item_block_info_options_button_size">UK 52</button>
+                            <button class="section__item_block_info_options_button section__item_block_info_options_button_size">UK 54</button>
+                            <button class="section__item_block_info_options_button section__item_block_info_options_button_size">UK 56</button>
                         </div>
                         <div class="section__item_block_info_options section__item_block_info_options_color">
                             <span class="section__item_block_info_options_text">Color:</span>
-                            <button class="section__item_block_info_options_button">
-                                <span class="section__item_block_info_options_button_text">Black</span>
-                            </button>
-                            <button class="section__item_block_info_options_button selected">
-                                <span class="section__item_block_info_options_button_text">Blue</span>
-                            </button>
+                            <button class="section__item_block_info_options_button section__item_block_info_options_button_color">Black</button>
+                            <button class="section__item_block_info_options_button section__item_block_info_options_button_color">Blue</button>
                         </div>
                     </div>
                     <button class="section__item_block_info_button button">
@@ -255,8 +246,10 @@
         </div>
     </footer>
     <!------------------- FOOTER END ---------------------->
-    <script src="./js/header.js"></script>
+
+    <script src="./js/shopping-bag.js"></script>
     <script src="./js/imageSwitcher.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
