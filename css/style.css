@@ -594,14 +594,9 @@ i:hover {
         margin-top: 10px;
     }
 
-    .section__shoppingBag_person_card.person_card.person_card_3,
-    .section__shoppingBag_person_card.person_card.person_card_4 {
-        margin: 0;
-    }
-
     .section__shoppingBag_highlight {
         font-size: 11px;
-        margin-top: 110px;
+        margin-top: 30px;
     }
 
     .section__shoppingBag_total {
@@ -640,9 +635,7 @@ i:hover {
         height: 223px;
     }
 
-    .section__shoppingBag_person_card.person_card,
-    .section__shoppingBag_person_card.person_card.person_card_3, 
-    .section__shoppingBag_person_card.person_card.person_card_4 {
+    .section__shoppingBag_person_card.person_card {
         width: 100%;
         margin-bottom: 42px;
     }

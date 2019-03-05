@@ -15,3 +15,19 @@ photosWrapper.addEventListener("click", function (e) {
         target.classList.add("active"); // setting background for current photo
     }
 });
+
+let btnBlocks = document.querySelectorAll(".section__item_block_info_options");
+for (let i = 0; i < btnBlocks.length; i++) {
+    let btns = btnBlocks[i].querySelectorAll(".section__item_block_info_options_button");
+    let currentBlock = btnBlocks[i];
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function (e) {
+            let target = e.target;
+            let current = currentBlock.querySelectorAll(".selected");
+            if (!!current.length === true) {
+                current[0].classList.remove("selected");
+            }
+            target.classList.add("selected");
+        });
+    }
+}
