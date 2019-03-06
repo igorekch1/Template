@@ -268,8 +268,12 @@
         display: none;
     }
 
-    .slider-dots>span {
+    .slider-dot {
         background-color: #c6c6c6;
+    }
+
+    .current-dot  {
+        background-color: #f14a58;
     }
 
     .slider__block_grid {

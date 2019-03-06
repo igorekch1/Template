@@ -1,16 +1,23 @@
 let slideIndex = 1;
-let x = 1;
 
-// let show = setInterval(function(){
-//     addSlide(x)
-// }, 1000);
+let slideInterval;
+
+function show() {
+    slideInterval = setInterval(function(){
+        showSlides(++slideIndex)
+    }, 2000);
+}
 
 function addSlide(n) {
     showSlides(slideIndex += n);
+    clearInterval(slideInterval);
+    show();
 }
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
+    clearInterval(slideInterval);
+    show();
 }
 
 function showSlides(n) {
@@ -18,17 +25,9 @@ function showSlides(n) {
     let slides = document.querySelectorAll(".slider__block");
     let dots = document.querySelectorAll(".slider-dot");    
 
-    // console.log(slides[x], x)
     if (n > slides.length) slideIndex = 1;
-    // if (x > slides.length) {
-        // slideIndex = 1;
-        // x = 1;
-    // }
 
     if (n < 1) slideIndex = slides.length;
-    // if (x < 1) {
-        // slideIndex = slides.length;
-    // }
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -37,12 +36,11 @@ function showSlides(n) {
     for (let i = 0; i < dots.length; i++) {
         dots[i].classList.remove("current-dot");
     }
-    
-    // slides[x-1].style.display = "block";
-    // dots[x-1].classList.add("current-dot");
+    console.log(dots[slideIndex-1])
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("current-dot");
-    x++
 }
 
-
+window.onload = function(e) {
+    show();
+}

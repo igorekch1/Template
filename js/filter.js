@@ -110,9 +110,10 @@ function filterItems(key, value) {
             filteredItems.push(items[i]);
         }
     }
-    console.log(filteredItems)
+
     hideAllItems();
     let cardNames = document.querySelectorAll(".card_name");
+    
     for (let i = 0; i < filteredItems.length; i++) {
         for (let j = 0; j < cardNames.length; j++) {
             if (filteredItems[i].name === cardNames[j].innerHTML) {
@@ -225,7 +226,6 @@ dropdown_content.addEventListener("click", function (e) {
             let key = target.parentNode.parentNode.children[0].innerHTML.trim().split(" ").join("").toLowerCase();
             let value = target.textContent.trim();
             filterItems(key, value);
-            console.log(key, "  ", value)
             // Styling
             setTitles();
             let selectedClass = target.parentNode.parentNode.classList[1];
