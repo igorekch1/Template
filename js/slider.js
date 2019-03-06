@@ -1,6 +1,6 @@
-let slideIndex = 1;
+slideIndex = 1;
 
-showSlides(slideIndex);
+setInterval(showSlides(slideIndex), 2000);
 
 function addSlide(n) {
     showSlides(slideIndex += n);
@@ -26,7 +26,7 @@ function showSlides(n) {
     for (let i = 0; i < dots.length; i++) {
         dots[i].classList.remove("current-dot");
     }
-
+    
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("current-dot");
 }

@@ -224,6 +224,22 @@
     background-color: #f14a58;
 }
 
+.fade {
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from{opacity: .7}
+    to{opacity: 1}
+}
+@keyframes fade {
+    from{opacity: .7}
+    to{opacity: 1}
+}
+
 @media screen and (max-width:1024px) {
     .section__slider {
         height: 820px;
