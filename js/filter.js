@@ -21,7 +21,7 @@ let items = [{
     color: "Green",
     brand: "River Island",
     size: "UK 18L",
-    pricerange: "£100-£299"
+    pricerange: "£100 - £299"
 }, {
     name: "With Patchwork Crochet",
     fashion: "Vintage",
@@ -71,7 +71,7 @@ let items = [{
     size: "UK 20S",
     pricerange: "To £99"
 }, {
-    name: "Paul & Joe Sister Jumper with Neon Trims",
+    name: "Paul &amp; Joe Sister Jumper with Neon Trims",
     fashion: "New Look",
     producttype: "Jersey Tops",
     color: "White",
@@ -85,7 +85,7 @@ let items = [{
     color: "Blue",
     brand: "New Balance",
     size: "UK 2",
-    pricerange: "£100-£299"
+    pricerange: "£100 - £299"
 }, {
     name: "Boyfriend T-shirt with Bohemian Print",
     fashion: "Classical style",
@@ -96,15 +96,29 @@ let items = [{
     pricerange: "To £99"
 }];
 
-// Desktop version
-function reset(elem) {
-    elem.children[0].style.padding = "20px";
-    elem.querySelector(".dropbtn-name").style.font = "16px/1 'OpenSans Bold', sans-serif"
-    elem.style.backgroundColor = "#fff";
-    elem.children[0].lastElementChild.innerHTML = "";
-    if (elem.querySelector(".selected-filter")) {
-        elem.querySelector(".selected-filter").style.backgroundColor = "#fff";
-        elem.querySelector(".selected-filter").style.color = "#000";
+function hideAllItems() {
+    let personCards = document.querySelectorAll(".person_card");
+    for (let i = 0; i < personCards.length; i++) {
+        personCards[i].style.display = "none";
+    }
+}
+
+function filterItems(key, value) {
+    let filteredItems = new Array();
+    for (let i = 0; i < items.length; i++) {
+        if (items[i][key] === value) {
+            filteredItems.push(items[i]);
+        }
+    }
+    console.log(filteredItems)
+    hideAllItems();
+    let cardNames = document.querySelectorAll(".card_name");
+    for (let i = 0; i < filteredItems.length; i++) {
+        for (let j = 0; j < cardNames.length; j++) {
+            if (filteredItems[i].name === cardNames[j].innerHTML) {
+                cardNames[j].parentNode.style.display = "block";
+            }
+        }
     }
 }
 
@@ -115,31 +129,15 @@ function displayAllItems() {
     }
 }
 
-function hideAllItems() {
-    let personCards = document.querySelectorAll(".person_card");
-    for (let i = 0; i < personCards.length; i++) {
-        personCards[i].style.display = "none";
-    }
-}
-
-function filterItems(key, value) {
-    console.log(value)
-    let filteredItems = new Array();
-    for (let i = 0; i < items.length; i++) {
-        if (items[i][key] === value) {
-            filteredItems.push(items[i]);
-        }
-    }
-    hideAllItems();
-    let cardNames = document.querySelectorAll(".card_name");
-    // return filteredItems;
-    for (let i = 0; i < filteredItems.length; i++) {
-        for (let j = 0; j < cardNames.length; j++) {
-            if (filteredItems[i].name === cardNames[j].innerHTML) {
-                console.log(cardNames[j].parentNode)
-                cardNames[j].parentNode.style.display = "block";
-            }
-        }
+// Desktop version
+function reset(elem) {
+    elem.children[0].style.padding = "20px";
+    elem.querySelector(".dropbtn-name").style.font = "16px/1 'OpenSans Bold', sans-serif"
+    elem.style.backgroundColor = "#fff";
+    elem.children[0].lastElementChild.innerHTML = "";
+    if (elem.querySelector(".selected-filter")) {
+        elem.querySelector(".selected-filter").style.backgroundColor = "#fff";
+        elem.querySelector(".selected-filter").style.color = "#000";
     }
 }
 
@@ -167,7 +165,7 @@ for (let i = 0; i < dropdown.length; i++) {
                 let key = this.querySelector(".dropbtn-name").innerHTML.trim().split(" ").join("").toLowerCase();
                 let value = target.textContent.trim();
                 filterItems(key, value);
-
+                // Styling
                 this.children[0].style.padding = "10px 20px";
                 this.querySelector(".dropbtn-name").style.font = "12px/1 'Roboto Bold', sans-serif"
                 this.style.backgroundColor = "#e5e5e5";
@@ -175,7 +173,6 @@ for (let i = 0; i < dropdown.length; i++) {
             } else {
                 displayAllItems();
                 reset(this);
-                console.log("Not selected!!!")
             }
         }
     });
@@ -221,8 +218,15 @@ dropdown_content.addEventListener("click", function (e) {
     prevTarget = target;
     if (target.parentNode.classList.contains("dropdown-content-list-items")) {
         if (target.innerHTML === "Not selected") {
-            setTitles()
+            setTitles();
+            displayAllItems();
         } else {
+            // Filtering
+            let key = target.parentNode.parentNode.children[0].innerHTML.trim().split(" ").join("").toLowerCase();
+            let value = target.textContent.trim();
+            filterItems(key, value);
+            console.log(key, "  ", value)
+            // Styling
             setTitles();
             let selectedClass = target.parentNode.parentNode.classList[1];
             target.style.color = "rgb(241,74,88)";
@@ -231,5 +235,9 @@ dropdown_content.addEventListener("click", function (e) {
             titleElem.innerHTML = target.innerHTML;
             titleElem.style.color = "rgb(241,74,88)";
         }
+
+        open.classList.toggle("show");
+        close.classList.toggle("show");
+        dropdown_content.classList.toggle("show");
     }
 });
