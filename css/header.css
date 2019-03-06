@@ -33,6 +33,14 @@
     margin-right: 50px;
 }
 
+.header__block_bag {
+    transition: transform .5 linear;
+}
+
+.header__block_bag:hover {
+    transform: scale(1.05);
+}
+
 .header__block_bag .fa-shopping-bag {
     margin-right: 15px;
 }
