@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/personcard.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
@@ -20,7 +21,7 @@
     <!---------- HEADER START ------------>
     <header class="header">
         <div class="header__block">
-            <h1 class="header__block_title">Template</h1>
+            <h1 class="header__block_title"><a href="#">Template</a></h1>
             <h1 class="header__block_title_mobile">TL</h1>
             <div class="header__block_singup_bag">
                 <div class="header__block_singup">
@@ -61,7 +62,80 @@
     <!--------- HEADER END ----------->
 
     <!-- SECTION SLIDER START -->
-    <section class="slider"></section>
+    <<section class="section__slider">
+            <div class="slider__wrapper">
+                <div class="slider__block slider__block_1">
+                    <div class="slider__item slider__item_1">
+                        <a href="./catalog.html">
+                            <img src="./img/start/slider/slide-1-photo-1-desktop.png" alt="SLIDE 1 PHOTO 1" class="slider__image destop-image">
+                            <img src="./img/start/slider/slide-1-photo-1-tablet.png" alt="SLIDE 1 PHOTO 1" class="slider__image tablet-image">
+                            <img src="./img/start/slider/slide-1-photo-1-mobile.png" alt="SLIDE 1 PHOTO 1" class="slider__image mobile-image">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider__block slider__block_2">
+                    <div class="slider__block_grid">
+                        <div class="slider__item slider__item_2">
+                            <a href="./item.html">
+                                <img src="./img/start/slider/slide-2-photo-1-desktop.png" alt="SLIDE 2 PHOTO 1" class="slider__image destop-image">
+                                <img src="./img/start/slider/slide-2-photo-1-tablet.png" alt="SLIDE 2 PHOTO 1" class="slider__image tablet-image">
+                                <img src="./img/start/slider/slide-2-photo-1-mobile.png" alt="SLIDE 2 PHOTO 1" class="slider__image mobile-image">
+                            </a>
+                        </div>
+                        <div class="slider__item slider__item_3">
+                            <a href="./item-2.html">
+                                <img src="./img/start/slider/slide-2-photo-2-desktop.png" alt="SLIDE 2 PHOTO 2" class="slider__image destop-image">
+                                <img src="./img/start/slider/slide-2-photo-2-tablet.png" alt="SLIDE 2 PHOTO 2" class="slider__image tablet-image">
+                            </a>
+                        </div>
+                        <div class="slider__item slider__item_4">
+                            <a href="./catalog.html">
+                                <img src="./img/start/slider/slide-2-photo-3-desktop.png" alt="SLIDE 2 PHOTO 3" class="slider__image destop-image">
+                                <img src="./img/start/slider/slide-2-photo-3-tablet.png" alt="SLIDE 2 PHOTO 3" class="slider__image tablet-image">
+                            </a>
+                        </div>
+                        <div class="slider__item slider__item_5">
+                            <a href="./item.html">
+                                <img src="./img/start/slider/slide-2-photo-4-desktop.png" alt="SLIDE 2 PHOTO 4" class="slider__image destop-image">
+                                <img src="./img/start/slider/slide-2-photo-4-tablet.png" alt="SLIDE 2 PHOTO 4" class="slider__image tablet-image">
+                                <img src="./img/start/slider/slide-2-photo-4-mobile.png" alt="SLIDE 2 PHOTO 4" class="slider__image mobile-image">
+                            </a>
+                        </div>
+                        <div class="slider__item slider__item_6">
+                            <a href="./item-2.html">
+                                <img src="./img/start/slider/slide-2-photo-5-desktop.png" alt="SLIDE 2 PHOTO 5" class="slider__image destop-image">
+                                <img src="./img/start/slider/slide-2-photo-5-tablet.png" alt="SLIDE 2 PHOTO 5" class="slider__image tablet-image">
+                                <img src="./img/start/slider/slide-2-photo-5-mobile.png" alt="SLIDE 3 PHOTO 5" class="slider__image mobile-image">
+                            </a>
+                        </div>
+                        <div class="slider__item slider__item_7">
+                            <a href="./catalog.html">
+                                <img src="./img/start/slider/slide-2-photo-6-desktop.png" alt="SLIDE 2 PHOTO 6" class="slider__image destop-image">
+                                <img src="./img/start/slider/slide-2-photo-6-tablet.png" alt="SLIDE 2 PHOTO 6" class="slider__image tablet-image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__block slider__block_3">
+                    <div class="slider__item slider__item_8">
+                        <a href="./item.html">
+                            <img src="./img/start/slider/slide-3-photo-1-desktop.png" alt="SLIDE 3 PHOTO 1" class="slider__image destop-image">
+                            <img src="./img/start/slider/slide-3-photo-1-tablet.png" alt="SLIDE 3 PHOTO 1" class="slider__image tablet-image">
+                            <img src="./img/start/slider/slide-3-photo-1-mobile.png" alt="SLIDE 3 PHOTO 1" class="slider__image mobile-image">
+                        </a>
+                    </div>
+                </div>
+    
+                <a class="horizontal-controls" id="prev" onclick="addSlide(-1)"><i class="fas fa-angle-left"></i></a>
+                <a class="horizontal-controls" id="next" onclick="addSlide(1)"><i class="fas fa-angle-right"></i></a>
+    
+                <div class="slider-dots">
+                    <span class="slider-dot" onclick="currentSlide(1)"></span>
+                    <span class="slider-dot" onclick="currentSlide(2)"></span>
+                    <span class="slider-dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
     <!-- SECTION SLIDER END -->
 
     <main>
@@ -260,6 +334,7 @@
     <!------------------- FOOTER END ---------------------->
     <script src="./js/shopping-bag.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 
 </html>
