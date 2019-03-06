@@ -21,3 +21,14 @@ for (let i = 0; i < dropdown.length; i++) {
         }
     });
 }
+
+let dropdown_titles = document.querySelector(".dropdown-menu-titles"),
+    dropdown_content = document.querySelector(".dropdown-content-tablet"),
+    close = document.querySelector(".fa-times"),
+    open = document.querySelector(".fa-angle-down");
+
+dropdown_titles.addEventListener("click", function(e) {
+    open.classList.toggle("show");
+    close.classList.toggle("show");
+    dropdown_content.classList.toggle("show");
+});

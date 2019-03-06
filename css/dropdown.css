@@ -58,3 +58,128 @@
     color: #f14a58;
     padding-top: 10px;
 }
+
+.dropdown-menu-tablet {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown-menu-tablet {
+        display: block;
+        position: relative;
+    }
+
+    .dropdown-menu-titles {
+        position: relative;
+        padding: 25px 40px;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        cursor: pointer;
+    }
+
+    .dropdown-menu-titles > div:nth-child(1) {
+        padding-left: 5px;
+    }
+
+    .dropdown-action .fa-times,
+    .dropdown-action .fa-angle-down {
+        display: none;
+    }
+
+    .dropdown-menu-title {
+        font: 14px/1 "OpenSans Bold", sans-serif;
+        margin-left: -3px;
+    }
+
+    .dropdown-menu-title + .dropdown-menu-title::before {
+        content: ", ";
+    }
+
+    .dropdown-content-tablet {
+        display: none;
+        width: 100%;
+        padding: 40px 0 0 35px;
+        position: absolute;
+        background-color: #ffffff;
+        z-index: 999;
+    }
+
+    .dropdown-menu-tablet .show {
+        display: block;
+    }
+
+    .dropdown-content-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dropdown-action { 
+        height: 100%;   
+        width: 60px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        box-shadow: -20px 0 14px #ffffff;
+    }
+
+    .dropdown-action > i {
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .dropdown-action .fa-times {
+        font-size: 22px;
+        color: #f14a58;
+    }
+
+    .dropdown-content-list > div {
+        width: 33.33%;
+        margin-bottom: 50px;
+    }
+
+    .dropdown-content-list-title {
+        font: 16px/1 "Roboto Bold", sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-content-list ul {
+        list-style: disc;
+    }
+
+    .dropdown-content-list ul > li {
+        font: 14px/1 "OpenSans Bold", sans-serif;
+        color: #a8a8a8;
+        margin-left: 15px;
+    }
+
+    .dropdown-content-list ul > li:hover {
+        cursor: pointer;
+        color: #f14a58;
+    }
+
+    .dropdown-content-list ul > li + li {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .dropdown-content-list > div {
+        width: 50%;
+        margin-bottom: 35px;
+    }
+
+    .dropdown-menu-titles {
+        /* width: 90%; */
+        padding: 20px;
+    }
+
+    .dropdown-menu-titles > div:nth-child(1) {
+        width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
