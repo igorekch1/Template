@@ -15,17 +15,17 @@ function createElem(tag, className, container, text) {
         container.appendChild(elem);
     } else {
         document.body.appendChild(elem)
-    };
+    }
 
     return elem;
-};
+}
 
 main.addEventListener("click", function (e) {
     let target = e.target;
 
     function destroyBlock(block) {
         block.parentNode.removeChild(block);
-    };
+    }
 
     function findItem(arr, name, size, color) {
         for (let i = 0; i < arr.length; i++) {
@@ -36,7 +36,7 @@ main.addEventListener("click", function (e) {
             }
         }
         return null;
-    };
+    }
 
     //When user clicks on "Add to bag"
     if (target.classList.contains("section__item_block_info_button") ||
@@ -65,9 +65,9 @@ main.addEventListener("click", function (e) {
                     quantity: 1,
                     img: "./img/item/" + image + "-bag.png",
                     imgLocation: location
-                };
+                }
                 shoppingBag.push(item);
-            };
+            }
 
             bagPrice.innerHTML = (Number(price) + Number(bagPrice.innerHTML)).toFixed(2);
             bagCounter.innerHTML = Number(bagCounter.innerHTML) + 1;
@@ -99,8 +99,8 @@ main.addEventListener("click", function (e) {
             sectionHighlight.parentNode.insertBefore(wrapper, sectionHighlight);
         } else {
             alert("The bag is empty!!!");
-        };
-    };
+        }
+    }
     // When user clicks on "Empty bag"
     if (target.classList.contains("clear_bag")) {
         if (bagCounter.innerHTML != "0") {
@@ -122,8 +122,8 @@ main.addEventListener("click", function (e) {
             sectionHighlight.parentNode.insertBefore(wrapper, sectionHighlight);
         } else {
             alert ("The bag is already empty!");
-        };
-    };
+        }
+    }
     // When user clicks on "Remove item"
     if (target.classList.contains("section__shoppingBag_block_remove_item")) {
         //getting data of the item
@@ -162,8 +162,8 @@ main.addEventListener("click", function (e) {
             let wrapper = createElem("section", "section__shoppingBag_people_card");
             createElem("div", "empty_bag_text", wrapper, "Your shopping bag is empty. Use Catalog to add new items");
             sectionHighlight.parentNode.insertBefore(wrapper, sectionHighlight);
-        };
-    };
+        }
+    }
 });
 
 window.addEventListener("load", function (e) {

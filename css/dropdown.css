@@ -164,6 +164,10 @@
     .dropdown-content-list ul > li + li {
         margin-top: 20px;
     }
+
+    .dropdown-content-list ul > li:nth-child(1) {
+        color: rgb(0,0,0);
+    }
 }
 
 @media screen and (max-width:767px) {
