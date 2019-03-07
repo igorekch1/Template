@@ -123,6 +123,7 @@
         position: absolute;
         right: 0;
         top: 0;
+        background-color: #ffffff;
         box-shadow: -20px 0 14px #ffffff;
     }
 
@@ -177,7 +178,6 @@
     }
 
     .dropdown-menu-titles {
-        /* width: 90%; */
         padding: 20px;
     }
 

@@ -49,7 +49,6 @@ main.addEventListener("click", function (e) {
         let imagePath = this.querySelector(".main_photo").src.split("/");
         let image = imagePath[imagePath.length - 1].split(".")[0];
         let location = window.location.href.split("/")[window.location.href.split("/").length - 1];
-        console.log(location)
         //check if user has chosen siza and color
         if (!!size && !!color) {
             // If such item already exists

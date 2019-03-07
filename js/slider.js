@@ -5,7 +5,7 @@ let slideInterval;
 function show() {
     slideInterval = setInterval(function(){
         showSlides(++slideIndex)
-    }, 2000);
+    }, 10000);
 }
 
 function addSlide(n) {
@@ -36,7 +36,7 @@ function showSlides(n) {
     for (let i = 0; i < dots.length; i++) {
         dots[i].classList.remove("current-dot");
     }
-    console.log(dots[slideIndex-1])
+    
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("current-dot");
 }

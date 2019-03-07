@@ -99,7 +99,11 @@ button {
     margin: 0 auto;
 }
 
-.dropdown-menu {
+.dropdown-menu,
+.section__item_headline,
+.section__shoppingBag_headline,
+.section__shoppingBag_highlight,
+.footer {
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -135,16 +139,13 @@ i:hover {
 /* ---------------------------------------------------------- */
 
 /* --------------- SECTION BANNERS START -------------------- */
-.section__banners {
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5; 
-}
-
 .section__banners_wrapper {
     display: flex;
     justify-content: center;
     max-width: 1300px;
     margin: 0 auto;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; 
 }
 
 .section__banners_wrapper > div + div {
@@ -226,10 +227,6 @@ i:hover {
 }
 
 @media screen and (max-width: 1024px){
-    .section__banners_wrapper {
-        /* width: 746px; */
-    }
-
     .section__banners > a {
         height: 250px;
     }
@@ -436,6 +433,8 @@ i:hover {
 
     .section__catalogItems_button {
         margin: 20px auto 100px;
+        width: 220px;
+        height: 60px;
     }
 
     .section__banners.section__catalog_banner {
@@ -469,8 +468,7 @@ i:hover {
 /* -------------- SECTION SHOPPING BAG START ------------------- */
 .section__shoppingBag_headline {
     padding: 15px 0 15px 90px;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5; 
+    border: 1px solid #e5e5e5;
 }
 
 .headline_text {

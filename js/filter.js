@@ -128,6 +128,8 @@ function displayAllItems() {
     for (let i = 0; i < personCards.length; i++) {
         personCards[i].style.display = "block";
     }
+
+    catalog_text.style.display = "block";
 }
 
 // Desktop version
@@ -143,7 +145,8 @@ function reset(elem) {
 }
 
 let dropdown_menu = document.querySelector(".dropdown-menu"),
-    dropdown = dropdown_menu.querySelectorAll(".dropdown");
+    dropdown = dropdown_menu.querySelectorAll(".dropdown"),
+    catalog_text = document.querySelector(".section__catalogItems_text");
 for (let i = 0; i < dropdown.length; i++) {
     let target, prevTarget;
     dropdown[i].addEventListener("click", function (e) {
@@ -166,11 +169,13 @@ for (let i = 0; i < dropdown.length; i++) {
                 let key = this.querySelector(".dropbtn-name").innerHTML.trim().split(" ").join("").toLowerCase();
                 let value = target.textContent.trim();
                 filterItems(key, value);
+                
                 // Styling
                 this.children[0].style.padding = "10px 20px";
                 this.querySelector(".dropbtn-name").style.font = "12px/1 'Roboto Bold', sans-serif"
                 this.style.backgroundColor = "#e5e5e5";
                 this.children[0].lastElementChild.innerHTML = target.textContent;
+                catalog_text.style.display = "none";
             } else {
                 displayAllItems();
                 reset(this);
@@ -234,6 +239,7 @@ dropdown_content.addEventListener("click", function (e) {
             titleElem = dropdown_titles.querySelector(".dropdown-menu-title-" + selectedClass);
             titleElem.innerHTML = target.innerHTML;
             titleElem.style.color = "rgb(241,74,88)";
+            catalog_text.style.display = "none";
         }
 
         open.classList.toggle("show");

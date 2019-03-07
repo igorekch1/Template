@@ -1,5 +1,5 @@
 .footer {
-    border-top: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
 }
 
 .footer__block {
@@ -42,7 +42,7 @@
     line-height: 40px;
 }
 
-.footer_block_column_list>li>a:hover {
+.footer__block a:hover {
     text-decoration: underline;
 }
 
